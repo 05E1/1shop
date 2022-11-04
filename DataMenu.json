@@ -1,0 +1,32 @@
+[{
+        "id": "1",
+        "Url": "/",
+        "Name": "index.htm",
+        "icon": "fa fa-chart-area"
+    },
+    {
+        "id": "2",
+        "Url": "NewSp",
+        "Name": "MenProducts.htm",
+        "icon": "fa fa-chart-area"
+    },
+    {
+        "id": "3",
+        "Url": "/Girl",
+        "Name": "GirlProducts.htm",
+        "icon": "fa fa-chart-area"
+    },
+    {
+        "id": "4",
+        "Url": "/Men",
+        "Name": "MenProducts.htm",
+        "icon": "fa fa-chart-area"
+    },
+
+    {
+        "id": "5",
+        "Url": "/Contact",
+        "Name": "Contact.htm",
+        "icon": "fa fa-chart-area"
+    }
+]
