@@ -21,7 +21,7 @@ app.config(function($routeProvider) {
             templateUrl: "Contact.htm",
             controller: "ContactController"
         })
-
+        // Thông tin về menu chính 
 })
 
 //const menuData =
