@@ -268,6 +268,20 @@ h5.modal-title {
   5.Section Product
 -----------------------*/
 
+.parallax_ground {
+    /* The image used */
+    background-image: url("../img/Ground.png");
+    /* Full height */
+    /* height: 50%; */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 5em !important;
+}
+
 .parallax {
     /* The image used */
     background-image: url("../img/banner/banner-1.jpg");
@@ -284,10 +298,10 @@ h5.modal-title {
 
 .parallax_Men {
     /* The image used */
-    background-image: url("../img/banner/banner-2.jpg");
+    background-image: url("..img/Ground.png");
     /* Full height */
-    /* height: 50%; */
-    min-height: 300px;
+    /* height: 50%; 
+    min-height: 300px;*/
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -354,11 +368,10 @@ h5.modal-title {
     border: 1px solid #83837b;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    /* margin: 0px; */
 }
 
 .product__item:hover {
-    color: rgb(247, 139, 139);
+    color: rgb(15, 13, 13);
     -webkit-border-radius: 6px;
     border-bottom: 2px solid #fa381a;
 }
