@@ -5,8 +5,8 @@ app.config(function($routeProvider) {
             templateUrl: "index.htm",
             controller: "homeController"
         })
-        .when("/Newsp", {
-            templateUrl: "NewProducts.htm",
+        .when("/New", {
+            templateUrl: "NewProduct.htm",
             controller: 'NewController'
         })
         .when("/Men", {
@@ -58,7 +58,7 @@ app.controller('main_controller', function($scope) {
     // },
     $scope.MenuItem = [{
             "id": "2",
-            "Url": "NewSp",
+            "Url": "New",
             "Name": "New Products",
             "icon": "bi bi-patch-plus"
         }, {
