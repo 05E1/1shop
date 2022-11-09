@@ -197,6 +197,16 @@ h5.modal-title {
 /* wrapper =========
 ======================================5.section  Phần Product =================================================*/
 
+image-popup {
+    display: flex !important;
+}
+
+.set_bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
 .wrapper {
     padding: 2rem;
 }
@@ -287,7 +297,8 @@ h5.modal-title {
     background-image: url("../img/banner/banner-1.jpg");
     /* Full height */
     /* height: 50%; */
-    min-height: 300px;
+    height: 200px;
+    /* min-height: 300px; */
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -298,6 +309,14 @@ h5.modal-title {
 
 .parallax_Men {
     /* The image used */
+    /* background: #000; */
+    /* position: fixed; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 999;
     background-image: url("..img/Ground.png");
     /* Full height */
     /* height: 50%; 
@@ -325,9 +344,48 @@ h5.modal-title {
 }
 
 .product {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    /* padding-top: 10px;
+    padding-bottom: 5px; */
+    padding: 10px 0px 5px;
 }
+
+
+/* 
+.image-popup {}
+
+.image-popup li {
+    display: inline-block;
+}
+
+.image-popup ul {
+    text-align: center;
+    width: 100%;
+    padding: 350px 100px -15px;
+    margin: 100;
+} */
+
+
+/* 
+.image-popup ul li a:link { */
+
+
+/* color: #FFF; */
+
+
+/* text-decoration: none; */
+
+
+/* text-transform: uppercase; */
+
+
+/* padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px; */
+
+
+/* 
+} */
 
 .filter__controls {
     text-align: right;
@@ -423,85 +481,80 @@ h5.modal-title {
     background: #ca1515;
 }
 
+
+/* ///////////////////////////////////////////////////////////////////// */
+
 .product__hover {
     position: absolute;
     left: 0;
     width: 100%;
-    bottom: 30px;
+    bottom: 0px;
     text-align: center;
 }
 
+.product__hover ul {
+    background: var(--primary);
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 .product__hover li {
-    list-style: none;
+    color: #f60303;
     display: inline-block;
-    margin-right: 10px;
-    position: relative;
-    top: 100px;
-    opacity: 0;
-}
-
-.product__hover li:nth-child(1) {
-    -webkit-transition: all 0.4s ease 0.1s;
-    -o-transition: all 0.4s ease 0.1s;
-    transition: all 0.4s ease 0.1s;
-}
-
-.product__hover li:nth-child(2) {
-    -webkit-transition: all 0.4s ease 0.15s;
-    -o-transition: all 0.4s ease 0.15s;
-    transition: all 0.4s ease 0.15s;
-}
-
-.product__hover li:nth-child(3) {
-    -webkit-transition: all 0.4s ease 0.2s;
-    -o-transition: all 0.4s ease 0.2s;
-    transition: all 0.4s ease 0.2s;
-}
-
-.product__hover li:last-child {
-    margin-right: 0;
-}
-
-.product__hover li:hover a {
-    background: #ca1515;
-}
-
-.product__hover li:hover a span {
-    color: #ffffff;
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
-
-.product__hover li a {
+    line-height: 40px;
+    background: -moz-linear-gradient(top, #ffffff, #4ea100);
+    background: -webkit-linear-gradient(top, #ffffff, #4ea100);
+    background: linear-gradient(to bottom, #ffffff, #4ea100);
+    border: 1px solid #96f866;
     font-size: 18px;
-    color: #111111;
-    display: block;
     height: 45px;
     width: 45px;
-    background: #ffffff;
-    line-height: 48px;
     text-align: center;
     border-radius: 50%;
     -webkit-transition: all, 0.5s;
     -o-transition: all, 0.5s;
     transition: all, 0.5s;
+    opacity: 6.9;
 }
 
-.product__hover li a span {
-    position: relative;
-    -webkit-transform: rotate(0);
-    -ms-transform: rotate(0);
-    transform: rotate(0);
-    -webkit-transition: all, 0.3s;
-    -o-transition: all, 0.3s;
-    transition: all, 0.3s;
-    display: inline-block;
+.product__hover a {
+    text-decoration: none;
+    color: rgb(248, 4, 4);
+    display: block;
+    opacity: 1.9;
 }
+
+.product__hover a:hover {
+    font-size: 18px;
+    color: #fff;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    -webkit-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s;
+    border-bottom: 2px solid #fa381a;
+    opacity: 0.9;
+}
+
+.product__hover li:hover a {
+    background: #ca1515;
+    opacity: 0.9;
+}
+
+
+/* Thực hiện hiển thị nội dung trong ảnh sản phẩm về các tính năng bán hàng */
+
+
+/* ============================================================ */
 
 .product__item__text {
     text-align: center;
     padding-top: 22px;
+    text-decoration: none;
 }
 
 .product__item__text h6 a {
@@ -534,6 +587,160 @@ h5.modal-title {
     color: #b1b0b0;
     text-decoration: line-through;
     margin-left: 4px;
+}
+
+
+/*---------------------
+  Contact
+-----------------------*/
+
+.contact {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.contact__address {
+    margin-bottom: 45px;
+}
+
+.contact__address h5 {
+    color: #111111;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.contact__address ul li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact__address ul li:last-child {
+    margin-bottom: 0;
+}
+
+.contact__address ul li h6 {
+    color: #111111;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact__address ul li h6 i {
+    font-size: 16px;
+    color: #ca1515;
+    margin-right: 5px;
+}
+
+.contact__address ul li p {
+    margin-bottom: 0;
+    font-size: 15px;
+    color: #444444;
+}
+
+.contact__address ul li span {
+    font-size: 15px;
+    color: #444444;
+    display: inline-block;
+    margin-right: 25px;
+    position: relative;
+}
+
+.contact__address ul li span:after {
+    position: absolute;
+    right: -15px;
+    top: 11px;
+    content: "|";
+    line-height: 0;
+}
+
+.contact__address ul li span:last-child {
+    margin-right: 0;
+}
+
+.contact__address ul li span:last-child:after {
+    display: none;
+}
+
+.contact__form h5 {
+    color: #111111;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.contact__form form input {
+    height: 50px;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #444444;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact__form form input::-webkit-input-placeholder {
+    color: #444444;
+}
+
+.contact__form form input::-moz-placeholder {
+    color: #444444;
+}
+
+.contact__form form input:-ms-input-placeholder {
+    color: #444444;
+}
+
+.contact__form form input::-ms-input-placeholder {
+    color: #444444;
+}
+
+.contact__form form input::placeholder {
+    color: #444444;
+}
+
+.contact__form form textarea {
+    height: 130px;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 12px;
+    font-size: 14px;
+    color: #444444;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    resize: none;
+}
+
+.contact__form form textarea::-webkit-input-placeholder {
+    color: #444444;
+}
+
+.contact__form form textarea::-moz-placeholder {
+    color: #444444;
+}
+
+.contact__form form textarea:-ms-input-placeholder {
+    color: #444444;
+}
+
+.contact__form form textarea::-ms-input-placeholder {
+    color: #444444;
+}
+
+.contact__form form textarea::placeholder {
+    color: #444444;
+}
+
+.contact__map {
+    height: 780px;
+}
+
+.contact__map iframe {
+    width: 100%;
 }
 
 

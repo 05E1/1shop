@@ -27,15 +27,8 @@ app.config(function($routeProvider) {
 //const menuData =
 
 app.controller('main_controller', function($scope) {
-    angular.element(document).ready(function() {
-        //some Ajax request
-    })
-    $scope.IsVisible = false;
 
-    $scope.ShowHide = function() {
-            $scope.IsVisible = $scope.IsVisible = true;
-        }
-        // ---- Menu ITEM Cấu trúc menu phân cấp 
+    // ---- Menu ITEM Cấu trúc menu phân cấp 
 
     // {
     //     "id": "1",
@@ -109,109 +102,6 @@ app.controller('main_controller', function($scope) {
 
 
 
-    $scope.DataProducts = [{
-            "Id": 00001,
-            "NameSP": "Hamburg Suites",
-            "Address": "An Der Alster 82",
-            "Description": "Only a few hundred meters from the city center, enjoy the energy of Hamburg each and every night of your stay in our hotel.",
-            "Content": "Nhập nội dung chi tiết vào đâu giới thiệu về sản phẩm",
-            "Discount": 10,
-            "Price": 299,
-            "Num": 55,
-            "size": [{
-                "NoSiz": 33,
-                "NoSiz": 34,
-                "NoSiz": 35,
-                "NoSiz": 36
-            }],
-            "color ": "vàng",
-            "Images ": [{
-                "FileName": "250x250.png ",
-            }, {
-                "FileName": "400x600.png",
-            }, {
-                "FileName": "400x600.png",
-                "widthRatio": 2,
-                "heightRatio": 2
-            }, {
-                "FileName": "1500x1500.png",
-                "widthRatio": 2,
-                "heightRatio": 2
-            }, {
-                "FileName": "Bedroom-1-2.jpg",
-            }, {
-                "FileName": "Bathroom-0.jpg",
-            }]
-        },
-        {
-            "Id": 00001,
-            "NameSP": "Hamburg Suites",
-            "Address": "An Der Alster 82",
-            "Description": "Only a few hundred meters from the city center, enjoy the energy of Hamburg each and every night of your stay in our hotel.",
-            "Content": "Nhập nội dung chi tiết vào đâu giới thiệu về sản phẩm",
-            "Discount": 10,
-            "Price": 299,
-            "Num": 55,
-            "size": [{
-                "NoSiz": 33,
-                "NoSiz": 34,
-                "NoSiz": 35,
-                "NoSiz": 36
-            }],
-            "color ": "vàng",
-            "Images ": [{
-                "FileName": "250x250.png ",
-            }, {
-                "FileName": "400x600.png",
-            }, {
-                "FileName": "400x600.png",
-                "widthRatio": 2,
-                "heightRatio": 2
-            }, {
-                "FileName": "1500x1500.png",
-                "widthRatio": 2,
-                "heightRatio": 2
-            }, {
-                "FileName": "Bedroom-1-2.jpg",
-            }, {
-                "FileName": "Bathroom-0.jpg",
-            }]
-        }, {
-            "Id": 0003,
-            "NameSP": "Sản phẩm quần âu ",
-            "Address": "An Der Alster 82",
-            "Description": "Only a few hundred meters from the city center, enjoy the energy of Hamburg each and every night of your stay in our hotel.",
-            "Content": "Nhập nội dung chi tiết vào đâu giới thiệu về sản phẩm",
-            "Discount": 10,
-            "Price": 5000000,
-            "Num": 55,
-            "size": [{
-                "NoSiz": 33,
-                "NoSiz": 34,
-                "NoSiz": 35,
-                "NoSiz": 36
-            }],
-            "color ": "vàng",
-            "Images ": [{
-                "FileName": "250x250.png ",
-            }, {
-                "FileName": "400x600.png",
-            }, {
-                "FileName": "400x600.png",
-                "widthRatio": 2,
-                "heightRatio": 2
-            }, {
-                "FileName": "1500x1500.png",
-                "widthRatio": 2,
-                "heightRatio": 2
-            }, {
-                "FileName": "Bedroom-1-2.jpg",
-            }, {
-                "FileName": "Bathroom-0.jpg",
-            }]
-        }
-
-    ];
     // -----------------------------Thực hiện show meunu con------------
     // const showSubmenuModes = [{
     //     name: 'onHover',
@@ -231,6 +121,8 @@ app.controller('main_controller', function($scope) {
     //     console.log($scope.input_value)
     // }
 });
+
+
 // --- Thực hiện đối với sản phẩm ,Request + response  từng sản phẩm chi tiết
 
 
