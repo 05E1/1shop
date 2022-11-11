@@ -13,7 +13,7 @@ li {
 /********** Template CSS **********/
 
  :root {
-    --primary: #d4f9c6;
+    --primary: #313230;
     /* background: ; */
     /* #F3BD00;*/
     --secondary: #757575;
@@ -181,6 +181,7 @@ nav {
     /* padding: 15px; */
     width: 100%;
     display: flex;
+    padding: 0px 45px 0px;
     background: var(--primary);
 }
 
@@ -219,11 +220,12 @@ nav .content-nav {
     /* list-style-type: none; */
     /* width: calc( 20% - 8px); */
     font-size: 12px;
-    background: -moz-linear-gradient(top, #ffffff, #4ea100);
-    background: -webkit-linear-gradient(top, #ffffff, #4ea100);
-    background: linear-gradient(to bottom, #ffffff, #4ea100);
-    border: 1px solid #fcfcfb;
-    -webkit-border-radius: 3px;
+    background: #313230;
+    /* background: -moz-linear-gradient(top, #ffffff, #313230);
+    background: -webkit-linear-gradient(top, #ffffff, #313230);
+    background: linear-gradient(to bottom, #ffffff, #313230); */
+    /* border: 1px solid #fcfcfb; */
+    /* -webkit-border-radius: 3px; */
     -moz-border-radius: 3px;
     /* margin: 0px; */
 }
@@ -235,12 +237,12 @@ nav .content-nav {
 }
 
 #menu a:hover {
-    /* background: #F1F1F1; */
-    background: -moz-linear-gradient(top, #ffffff, #d8f8ba);
-    background: -webkit-linear-gradient(top, #ffffff, #d8f8ba);
-    background: linear-gradient(to bottom, #ffffff, #d8f8ba);
+    background: #313230;
+    /* background: -moz-linear-gradient(top, #ffffff, #313230);
+    background: -webkit-linear-gradient(top, #ffffff, #313230);
+    background: linear-gradient(to bottom, #ffffff, #313230); */
     color: rgb(247, 139, 139);
-    -webkit-border-radius: 6px;
+    /* -webkit-border-radius: 6px; */
     border-bottom: 2px solid #fa381a;
 }
 

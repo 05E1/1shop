@@ -493,7 +493,8 @@ image-popup {
 }
 
 .product__hover ul {
-    background: var(--primary);
+    /* background: var(--primary); */
+    background: inherit;
     list-style-type: none;
     text-align: center;
     width: 100%;
@@ -504,15 +505,18 @@ image-popup {
 .product__hover li {
     color: #f60303;
     display: inline-block;
+    /* //inline-block; */
     line-height: 40px;
-    background: -moz-linear-gradient(top, #ffffff, #4ea100);
+    background: inherit;
+    /* background: -moz-linear-gradient(top, #ffffff, #4ea100);
     background: -webkit-linear-gradient(top, #ffffff, #4ea100);
     background: linear-gradient(to bottom, #ffffff, #4ea100);
-    border: 1px solid #96f866;
+    border: 1px solid #96f866; */
     font-size: 18px;
-    height: 45px;
-    width: 45px;
+    height: 30px;
+    width: 30px;
     text-align: center;
+    vertical-align: middle;
     border-radius: 50%;
     -webkit-transition: all, 0.5s;
     -o-transition: all, 0.5s;
@@ -528,13 +532,14 @@ image-popup {
 }
 
 .product__hover a:hover {
+    display: inline-block;
     font-size: 18px;
     color: #fff;
-    height: 45px;
-    width: 45px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
-    -webkit-transition: all, 0.5s;
-    -o-transition: all, 0.5s;
+    /* -webkit-transition: all, 0.5s;
+    -o-transition: all, 0.5s; */
     transition: all, 0.5s;
     border-bottom: 2px solid #fa381a;
     opacity: 0.9;
@@ -543,6 +548,10 @@ image-popup {
 .product__hover li:hover a {
     background: #ca1515;
     opacity: 0.9;
+}
+
+.product__item:hover .product__hover li:hover .product__hover a:hover {
+    display: inline-block;
 }
 
 
