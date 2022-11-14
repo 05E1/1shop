@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myapp" ng-controller="main_controller" lang="en">
+<html ng-app="myapp" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -70,7 +70,7 @@
 </head>
 
 
-<body>
+<body ng-controller="main_controller">
 
     <!-- header -->
     <header>
@@ -127,43 +127,225 @@
             <!-- kết thúc nav-mobile -->
 
 
+            <!--Test menu  -->
+            <!-- <section ng-app ng-controller="navCtrl">
+                <nav class="main">
+                    <ul class="ul-nav">
+                        <li class="li-nav li-main" ng-click="select($index)" ng-repeat="list in lists">{{list.name}}</li>
+                    </ul>
+                </nav>
+                <nav class="sub" ng-show="subMenuShow">
+                    <ul class="ul-nav ul-sec">
+                        <li class="li-nav li-main" ng-repeat="sublist in sublists">{{sublist}}</li>
+                    </ul>
+                </nav>
+            </section> -->
+            <!-- -------_End Test menu  Mobile  -->
 
-
+            <!-- ==========================================Header For Destop Ok ============================================== -->
             <div class="img-nav">
                 <img src="img/logo.png " alt=" " />
             </div>
             <div id="menu" class="content-nav">
                 <ul>
-                    <li ng-repeat="item in MenuItem" ng-hide="hideSubmenu">
-                        <a href="#!{{item.Url}}" data-toggle="{{link.sub && 'dropdown' || ''}}"><i class="{{item.icon}} "> </i>
-                                 {{item.Name}} <b   class="caret"></b> </a>
-
-                        <ul class="dropdown-menu">
-                            <li ng-repeat="subItem in MenuItem.Items">
-                                <a href="#!{{subItem.Url}}"><i class="{{subItem.icon}}"> </i>
-                                 {{subItem.Name}}</a>
-                            </li>
-
-                        </ul>
+                    <li>
+                        <a href="/" ng-click="init()">
+                            <i class="fa fa-home"> </i>Home<b class="caret"></b> </a>
+                    </li>
+                    <li ng-repeat="item in MenuItem">
+                        <!-- ng-hide="hideSubmenu"  ng-mouseover="select($index)" .ng-mouseover="subMenuShow =false " ng-click="ListSubMenu($index)"-->
+                        <a href="#!{{item.Url}}" ng-click="ListSubMenu($index) ">
+                            <i class="{{item.icon}} "> </i> {{item.Name}} <i class="fa fa-caret-down"></i><b class="caret"></b> </a>
+                    </li>
+                    <li>
+                        <a href="#!Contact" ng-click="initEnable()">
+                            <i class="fa fa-users"> </i> Contact<b class="caret"></b> </a>
                     </li>
                 </ul>
 
                 <form>
-                    <input type="text " name="search " placeholder="Tìm kiếm sản phẩm... " />
-                    <button type="submit "><i class="fa fa-search " aria-hidden="true "></i></button>
+                    <input class=" " id="txtsearch" type="text" ng-model="testfilter" name="search" placeholder="Tìm kiếm sản phẩm... " />
+                    <button type="submit " ng_click="getValueFromsearch()"><i class="fa fa-search " aria-hidden="true "></i></button>
                 </form>
+
             </div>
 
+            <!-- ========================================== End Header For Destop Ok ============================================== -->
 
 
 
-            <!-- The Modal -->
+            <!-- =========================================================The Modal============================= -->
             <button id="cart">
                 <i class="fa fa-shopping-basket " aria-hidden="true ">  Giỏ</i>
                  </button>
             <div id="myModal" class="modal">
                 <div class="modal-content ">
-                    <div class="modal-header ">
+                    <section>
+                        <div class="modal-header ">
+                            <h5 class="modal-title ">INVOICE </h5>
+                            <span class="close ">&times;</span>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="shop__cart__table">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Product</th>
+                                                        <th>Price</th>
+                                                        <th>Quantity</th>
+                                                        <th>Total</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="cart__product__item">
+                                                            <img src="img/shop-cart/cp-1.jpg" alt="">
+                                                            <div class="cart__product__item__title">
+                                                                <h6>Chain bucket bag</h6>
+                                                                <div class="rating">
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="cart__price">$ 150.0</td>
+                                                        <td class="cart__quantity">
+                                                            <div class="pro-qty">
+                                                                <input type="text" value="1">
+                                                            </div>
+                                                        </td>
+                                                        <td class="cart__total">$ 300.0</td>
+                                                        <td class="cart__close"><span class="icon_close"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="cart__product__item">
+                                                            <img src="img/shop-cart/cp-2.jpg" alt="">
+                                                            <div class="cart__product__item__title">
+                                                                <h6>Zip-pockets pebbled tote briefcase</h6>
+                                                                <div class="rating">
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="cart__price">$ 170.0</td>
+                                                        <td class="cart__quantity">
+                                                            <div class="pro-qty">
+                                                                <input type="text" value="1">
+                                                            </div>
+                                                        </td>
+                                                        <td class="cart__total">$ 170.0</td>
+                                                        <td class="cart__close"><span class="icon_close"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="cart__product__item">
+                                                            <img src="img/shop-cart/cp-3.jpg" alt="">
+                                                            <div class="cart__product__item__title">
+                                                                <h6>Black jean</h6>
+                                                                <div class="rating">
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="cart__price">$ 85.0</td>
+                                                        <td class="cart__quantity">
+                                                            <div class="pro-qty">
+                                                                <input type="text" value="1">
+                                                            </div>
+                                                        </td>
+                                                        <td class="cart__total">$ 170.0</td>
+                                                        <td class="cart__close"><span class="icon_close"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="cart__product__item">
+                                                            <img src="img/shop-cart/cp-4.jpg" alt="">
+                                                            <div class="cart__product__item__title">
+                                                                <h6>Cotton Shirt</h6>
+                                                                <div class="rating">
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="cart__price">$ 55.0</td>
+                                                        <td class="cart__quantity">
+                                                            <div class="pro-qty">
+                                                                <input type="text" value="1">
+                                                            </div>
+                                                        </td>
+                                                        <td class="cart__total">$ 110.0</td>
+                                                        <td class="cart__close"><span class="icon_close"></span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="cart__btn">
+                                            <a href="#">Continue Shopping</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="cart__btn update__btn">
+                                            <a href="#"><span class="icon_loading"></span> Update cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="discount__content">
+                                            <h6>Discount codes</h6>
+                                            <form action="#">
+                                                <input type="text" placeholder="Enter your coupon code">
+                                                <button type="submit" class="site-btn">Apply</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 offset-lg-2">
+                                        <div class="cart__total__procced">
+                                            <h6>Cart total</h6>
+                                            <ul>
+                                                <li>Subtotal <span>$ 750.0</span></li>
+                                                <li>Total <span>$ 750.0</span></li>
+                                            </ul>
+                                            <a href="#" class="primary-btn">Proceed to checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-secondary close-footer ">Đóng</button>
+                            <button type="button " class="btn btn-primary order ">Thanh Toán</button>
+                        </div>
+                    </section>
+
+
+
+
+
+
+
+                    <!-- <div class="modal-header ">
                         <h5 class="modal-title ">Giỏ Hàng</h5>
                         <span class="close ">&times;</span>
                     </div>
@@ -185,89 +367,491 @@
                     <div class="modal-footer ">
                         <button type="button " class="btn btn-secondary close-footer ">Đóng</button>
                         <button type="button " class="btn btn-primary order ">Thanh Toán</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
+
         </nav>
+
+        <!-- =============================Phần hiển thị menu con =================================== -->
+        <div class="container" ng-show="subMenuShow">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <ul class="filter__controls sub-menu ">
+
+                        <li ng-repeat="subItem in sublists ">
+                            <a href="#!{{subItem.Url}} " ng-click="AllProduct()"><i class="{{subItem.icon}} "> </i>
+                                 {{subItem.Name}} </a>
+                        </li>
+
+                        <!-- <li class="active " data-filter="* ">All</li>
+                <li data-filter="#!Detailsp ">BOSS’s</li> -->
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ====================================KẾT THÚC PHẦN HIỂN THỊ MENU CON=================================== -->
+
+
+
+
     </header>
 
     <!-- Kết thúc phần header  -->
 
+    <section ng-show="SectionProducts" class="product mt-4">
+        <div class="container">
+            <!-- ng-controller="SearchController" -->
+            <div id="nz-div" class="row tde">
+                <div class="col-lg-4 col-md-4 ">
+                    <div>
+                        <h3 class="tde"><span class="null">Products {{IDGroups}}</span></h3>
+
+                        <!-- <h4> </h4> -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="row property__gallery ">
+                <!-- <input type="text " ng-model="first_name_model " /> -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mix women " ng-repeat="x in DataProdut | filter:{IDGroup: IDGroups , NameSP:testfilter}   ">
+                    <!--  { NameSP: first_name_model } | filter:testfilter:strict  {IDGroup: IDGroups , NameSP:testfilter}-->
+                    <div class="product__item ">
+                        <div class="product__item__pic set-bg " style="background-image: url( 'img/product/product-2.jpg ');height: 50vh; ">
+                            <div class="label new ">New</div>
+                            <ul class="product__hover ">
+                                <li><a href="../img/product-8.jpg " class="image-popup "><span class="fa fa-street-view "></span></a></li>
+                                <li><a href="# "><span class="fa fa-heart "></span></a></li>
+                                <li><a href="# "><span class="fa fa-shopping-bag "></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text ">
+                            <h6><a href="#!Detailsp " ng-click="FnShowSectionSP() ">{{x.NameSP}}</a></h6>
+                            <div class="rating ">
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                            </div>
+                            <div class="product__price ">{{x.Price}}</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- content -->
 
-    <section class="wrapper ">
+    <!-- =========================================================================Product Details Section Begin -->
+    <section class="product-details spad " ng-show="ShowDetailSp ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-6 ">
+                    <div class="product__details__pic ">
+                        <div class="product__details__pic__left product__thumb nice-scroll ">
+                            <a class="pt active " href="#product-1 ">
+                                <img src="img/product/details/thumb-1.jpg " alt=" ">
+                            </a>
+                            <a class="pt " href="#product-2 ">
+                                <img src="img/product/details/thumb-2.jpg " alt=" ">
+                            </a>
+                            <a class="pt " href="#product-3 ">
+                                <img src="img/product/details/thumb-3.jpg " alt=" ">
+                            </a>
+                            <a class="pt " href="#product-4 ">
+                                <img src="img/product/details/thumb-4.jpg " alt=" ">
+                            </a>
+                        </div>
+                        <div class="product__details__slider__content ">
+                            <div class="product__details__pic__slider owl-carousel ">
+                                <img data-hash="product-1 " class="product__big__img " src="img/product/details/product-1.jpg " alt=" ">
+                                <img data-hash="product-2 " class="product__big__img " src="img/product/details/product-3.jpg " alt=" ">
+                                <img data-hash="product-3 " class="product__big__img " src="img/product/details/product-2.jpg " alt=" ">
+                                <img data-hash="product-4 " class="product__big__img " src="img/product/details/product-4.jpg " alt=" ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="product__details__text ">
+                        <h3>Essential structured blazer <span>Brand: SKMEIMore Men Watches from SKMEI</span></h3>
+                        <div class="rating ">
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <span>( 138 reviews )</span>
+                        </div>
+                        <div class="product__details__price ">$ 75.0 <span>$ 83.0</span></div>
+                        <p>Nemo enim ipsam voluptatem quia aspernatur aut odit aut loret fugit, sed quia consequuntur magni lores eos qui ratione voluptatem sequi nesciunt.</p>
+                        <div class="product__details__button ">
+                            <div class="quantity ">
+                                <span>Quantity:</span>
+                                <div class="pro-qty ">
+                                    <input type="text " value="1 ">
+                                </div>
+                            </div>
+                            <a href="# " class="cart-btn "><span class="icon_bag_alt "></span> Add to cart</a>
+                            <ul>
+                                <li><a href="# "><span class="icon_heart_alt "></span></a></li>
+                                <li><a href="# "><span class="icon_adjust-horiz "></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__details__widget ">
+                            <ul>
+                                <li>
+                                    <span>Availability:</span>
+                                    <div class="stock__checkbox ">
+                                        <label for="stockin ">
+                                            In Stock
+                                            <input type="checkbox " id="stockin ">
+                                            <span class="checkmark "></span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Available color:</span>
+                                    <div class="color__checkbox ">
+                                        <label for="red ">
+                                            <input type="radio " name="color__radio " id="red " checked>
+                                            <span class="checkmark "></span>
+                                        </label>
+                                        <label for="black ">
+                                            <input type="radio " name="color__radio " id="black ">
+                                            <span class="checkmark black-bg "></span>
+                                        </label>
+                                        <label for="grey ">
+                                            <input type="radio " name="color__radio " id="grey ">
+                                            <span class="checkmark grey-bg "></span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Available size:</span>
+                                    <div class="size__btn ">
+                                        <label for="xs-btn " class="active ">
+                                            <input type="radio " id="xs-btn ">
+                                            xs
+                                        </label>
+                                        <label for="s-btn ">
+                                            <input type="radio " id="s-btn ">
+                                            s
+                                        </label>
+                                        <label for="m-btn ">
+                                            <input type="radio " id="m-btn ">
+                                            m
+                                        </label>
+                                        <label for="l-btn ">
+                                            <input type="radio " id="l-btn ">
+                                            l
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Promotions:</span>
+                                    <p>Free shipping</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 ">
+                    <div class="product__details__tab ">
+                        <ul class="nav nav-tabs " role="tablist ">
+                            <li class="nav-item ">
+                                <a class="nav-link active " data-toggle="tab " href="#tabs-1 " role="tab ">Description</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " data-toggle="tab " href="#tabs-2 " role="tab ">Specification</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " data-toggle="tab " href="#tabs-3 " role="tab ">Reviews ( 2 )</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content ">
+                            <div class="tab-pane active " id="tabs-1 " role="tabpanel ">
+                                <h6>Description</h6>
+                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret. Neque porro lorem quisquam est, qui dolorem ipsum quia
+                                    dolor si. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla consequat massa quis enim.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                                    nec, pellentesque eu, pretium quis, sem.</p>
+                            </div>
+                            <div class="tab-pane " id="tabs-2 " role="tabpanel ">
+                                <h6>Specification</h6>
+                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret. Neque porro lorem quisquam est, qui dolorem ipsum quia
+                                    dolor si. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla consequat massa quis enim.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                                    nec, pellentesque eu, pretium quis, sem.</p>
+                            </div>
+                            <div class="tab-pane " id="tabs-3 " role="tabpanel ">
+                                <h6>Reviews ( 2 )</h6>
+                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret. Neque porro lorem quisquam est, qui dolorem ipsum quia
+                                    dolor si. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla consequat massa quis enim.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                                    nec, pellentesque eu, pretium quis, sem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-12 text-center ">
+                    <div class="related__title ">
+                        <h5>RELATED PRODUCTS</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 ">
+                    <div class="product__item ">
+                        <div class="product__item__pic set-bg " data-setbg="img/product/related/rp-1.jpg ">
+                            <div class="label new ">New</div>
+                            <ul class="product__hover ">
+                                <li><a href="img/product/related/rp-1.jpg " class="image-popup "><span class="arrow_expand "></span></a></li>
+                                <li><a href="# "><span class="icon_heart_alt "></span></a></li>
+                                <li><a href="# "><span class="icon_bag_alt "></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text ">
+                            <h6><a href="# ">Buttons tweed blazer</a></h6>
+                            <div class="rating ">
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                            </div>
+                            <div class="product__price ">$ 59.0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 ">
+                    <div class="product__item ">
+                        <div class="product__item__pic set-bg " data-setbg="img/product/related/rp-2.jpg ">
+                            <ul class="product__hover ">
+                                <li><a href="img/product/related/rp-2.jpg " class="image-popup "><span class="arrow_expand "></span></a></li>
+                                <li><a href="# "><span class="icon_heart_alt "></span></a></li>
+                                <li><a href="# "><span class="icon_bag_alt "></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text ">
+                            <h6><a href="# ">Flowy striped skirt</a></h6>
+                            <div class="rating ">
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                            </div>
+                            <div class="product__price ">$ 49.0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 ">
+                    <div class="product__item ">
+                        <div class="product__item__pic set-bg " data-setbg="img/product/related/rp-3.jpg ">
+                            <div class="label stockout ">out of stock</div>
+                            <ul class="product__hover ">
+                                <li><a href="img/product/related/rp-3.jpg " class="image-popup "><span class="arrow_expand "></span></a></li>
+                                <li><a href="# "><span class="icon_heart_alt "></span></a></li>
+                                <li><a href="# "><span class="icon_bag_alt "></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text ">
+                            <h6><a href="# ">Cotton T-Shirt</a></h6>
+                            <div class="rating ">
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                            </div>
+                            <div class="product__price ">$ 59.0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 ">
+                    <div class="product__item ">
+                        <div class="product__item__pic set-bg " data-setbg="img/product/related/rp-4.jpg ">
+                            <ul class="product__hover ">
+                                <li><a href="img/product/related/rp-4.jpg " class="image-popup "><span class="arrow_expand "></span></a></li>
+                                <li><a href="# "><span class="icon_heart_alt "></span></a></li>
+                                <li><a href="# "><span class="icon_bag_alt "></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text ">
+                            <h6><a href="# ">Slim striped pocket shirt</a></h6>
+                            <div class="rating ">
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                                <i class="fa fa-star "></i>
+                            </div>
+                            <div class="product__price ">$ 59.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Details Section End -->
+
+    <!---------------------------------------------------------------------------------------View trang con VIEW -------------------------------->
+    <section ng-show="Sectionview " class="wrapper ">
         <div ng-view></div>
 
     </section>
-    <!-- Kết thúc phần Content   <ng-view></ng-view> -->
+    <!-- Kết thúc phần Content  ng-if="IDGroups='Contact ' "  <ng-view></ng-view> -->
     <!-- Bắt đầu Footer  -->
 
 
     <section>
-        <!--Footer-->
-        <div class="footer-container ">
-            <div class="footer ">
-                <div class="footer-links-container ">
-                    <div class="widget widget-static-block ">
-                        <div class="f-address-box ">
-                            <h3 class="f-title"> E-Project Group 1 Class 05E </h3>
-                            <div class="bi bi-info-circle-fill"> Office: 08, Duy tan , Cau Giay, Hà Nội</div>
-                            <div class="bi bi-mailbox  "> Email:Tannv1@vnpt.vn</div>
-                            <div class="fas fa-phone-volume"> Telephone: 0904553638 </div>
-                            <div class="fa-light fa-users "> Hotline: Group pro: 01 </div>
-                            <div class="footer__payment">
-                                <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
-                                <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
-                                <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
-                                <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
-                                <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
-                            </div>
 
-                        </div>
+        <!--Footer-->
+        <!-- Begin Footer  -->
+
+        <div class="footer-container container my-3">
+
+            <!-- Footer -->
+            <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+                <!-- Section: Social media -->
+                <section class="d-flex justify-content-between p-4" style="background-color: #404042">
+                    <!-- Left -->
+                    <div class="me-5">
+                        <span>Get connected with us on social networks:</span>
                     </div>
-                    <div class="widget widget-static-block ">
-                        <div class="footer-aboutus ">
-                            <h3 class="f-title "> </h3>
-                            <ul class="f-links ">
-                                <li><a href="# ">Introduce</a></li>
-                                <li><a href="# ">Branch information</a></li>
-                                <li><a href="# ">Contact with me.</a></li>
-                            </ul>
-                        </div>
+                    <!-- Left -->
+
+                    <!-- Right -->
+                    <div>
+                        <a href="" class="text-white me-4">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="" class="text-white me-4">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="" class="text-white me-4">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="" class="text-white me-4">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="" class="text-white me-4">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="" class="text-white me-4">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </div>
-                    <div class="widget widget-static-block ">
-                        <div class="footer-policy-box ">
-                            <h3 class="f-title ">Chính sách chung</h3>
-                            <ul class="f-links ">
-                                <li><a href="# ">Điều khoản và quy định chung</a></li>
-                                <li><a href="# ">Hình thức thanh toán</a></li>
-                                <li><a href="# ">Vận chuyển và giao nhận</a></li>
-                                <li><a href="# ">Đổi trả và hoàn tiền</a></li>
-                                <li><a href="# ">Bảo mật thông tin</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="widget widget-static-block ">
-                        <div class="f-follow-box ">
-                            <h3 class="f-title ">Kết nối với chúng tôi</h3>
-                            <ul class="f-links ">
-                                <li><a class="bi bi-facebook " href="https://www.facebook.com/Foodta63-105289475624106 " target="_blank "> Facebook</a></li>
-                                <li><a class="bi bi-youtube " href="https://www.youtube.com/channel/UCPJ_uMfBrY7W820O-_LW1zg " target="_blank "> Youtube</a></li>
-                            </ul>
-                            <div class="footer__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                    <!-- Right -->
+                </section>
+                <!-- Section: Social media -->
+
+                <!-- Section: Links  -->
+                <section class="">
+                    <div class="container text-center text-md-start mt-5">
+                        <!-- Grid row -->
+                        <div class="row mt-3">
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                <!-- Content -->
+                                <h6 class="text-uppercase fw-bold">Company name</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                <p class="card-text" style="text-align: justify">
+                                    Gracious Garments is an online clothing store for high quality apparel for everyone in every family. Our goal is to bring to your door steps high quality fashion apparel made by trusted designers and manufacturers across the globe. Your satisfaction is
+                                    our guarantee and for this reason we are in business so as to provide you with all your clothing needs for everyone in your family at affordable price.
+                                </p>
+                                <div class="d-flex  align-content-center flex-wrap  footer__payment">
+                                    <a href="# "><img src="img/payment/payment-1.png " alt=" "></a>
+                                    <a href="# "><img src="img/payment/payment-2.png " alt=" "></a>
+                                    <a href="# "><img src="img/payment/payment-3.png " alt=" "></a>
+                                    <a href="# "><img src="img/payment/payment-4.png " alt=" "></a>
+                                    <a href="# "><img src="img/payment/payment-5.png " alt=" "></a>
+                                </div>
                             </div>
-                            <div><img alt=" " src="https://e-supply.vn/media/wysiwyg/dathongbao.png " width="180 "></div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase fw-bold">Products</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                <p>
+                                    <a href="#!" class="text-white">Women's </a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-white">Men's</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-white">All in one products new </a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-white">The best sale today!</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase fw-bold">Introduce</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                <p>
+                                    <a href="#!" class="text-white">Banking pay invoice </a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-white">Đổi trả và hoàn tiền</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-white">Shipping Rates</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-white">Help</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase fw-bold">Contact</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                <p><i class="fas fa-home mr-3"></i> 75 Dinh Tien Hoang , Hoan Kiem, Ha Noi, Viet Nam </p>
+                                <p><i class="fas fa-envelope mr-3"></i> tannv1@vnpt.vn /p>
+                                    <p><i class="fas fa-phone mr-3"></i> + 0904553638</p>
+                                    <p><i class="fas fa-print mr-3"></i> + Mr.Hưng, Mr.Quế, Mr.Giang, Mr.Mạnh</p>
+
+                                    <form action="" method="post">
+                                        <!--                            <input type="email" name="email"><input type="submit" value="Subscribe">-->
+
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required> <br> <input type="submit" value="Send to us">
+
+                                    </form>
+                            </div>
+                            <!-- Grid column -->
                         </div>
+                        <!-- Grid row -->
                     </div>
-                </div> <address class="copyright ">Group 01 {Mr.Tấn, Mr.Quế, Mr.Hưng, Mr.Giang, Mr.Mạnh}: © 11-2022 e-project - FPT All Rights Reserved.</address>
-            </div>
+                </section>
+                <!-- Section: Links  -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2022 Copyright:
+                    <a class="text-white" href="https://05e1.github.io/1shop/"> Group 01 : 05E FPT Class - https://05e1.github.io/1shop/ </a>
+                </div>
+                <!-- Copyright -->
+            </footer>
         </div>
+        <!-- End  Foooter -->
+
     </section>
 
 

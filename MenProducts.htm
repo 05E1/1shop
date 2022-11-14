@@ -13,28 +13,22 @@
     <p> Live show fashion online </p>
     <p> Live tream online at FPT-05E-Shop </p>
 </div>
-<section class="product spad" ng-controller="MenController">
+<section class="product ">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
-                <div class="section-title">
-                    <h4>Products Men</h4>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-8">
-                <ul class="filter__controls">
-                    <li class="active" data-filter="*">All</li>
-                    <li data-filter="#!Detailsp">BOSS’s</li>
-                    <li data-filter=".men">Owen</li>
-                    <li data-filter=".kid">DIOR</li>
-                    <li data-filter=".accessories">VERSACE</li>
-                    <li data-filter=".cosmetic">GUCCI</li>
+        <!-- <div class="row parallax" >
+            <div class="col-lg-8 col-md-8" ng-controller="main_controller">
+                <ul class="filter__controls" ng-repeat="subItem in sublists">
+                    <li ng-repeat="subItem in sublists">
+                        <a href="#!{{subItem.Url}}"><i class="{{subItem.icon}}"> </i>
+                                 {{subItem.Name}} </a>
+                    </li>
+
                 </ul>
             </div>
-        </div>
-        <div class="row property__gallery">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix women">
-                <div class="product__item" ng-repeat="x in Pro">
+        </div> -->
+        <div class="row property__gallery" ng-controller="MenController">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix women" ng-repeat="x in DataProdut | filter:{IDGroup: IDGroups} ">
+                <div class="product__item">
                     <div class="product__item__pic set-bg" style="background-image: url('img/product/product-2.jpg');height: 50vh;">
                         <div class="label new">New</div>
                         <ul class="product__hover">

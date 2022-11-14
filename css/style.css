@@ -69,6 +69,43 @@
 }
 
 
+/* .sub-menu {
+    display: block;
+} */
+
+.sub-menu {
+    /* display: none; */
+    /* padding: 60px 50 px 7px; */
+    z-index: 1;
+    color: #020201;
+    display: block;
+    padding: .8rem 1rem;
+    text-decoration: none;
+    /* border-left: 1px solid; */
+    /* font-weight: 800; */
+}
+
+.sub-menu a {
+    /* border-left: #83837b; */
+    color: #020201;
+    text-decoration: none;
+    outline: none;
+    padding: 0px;
+    flex-direction: row;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.sub-menu a:hover {
+    /* background-color: rgb(249, 246, 246); */
+    color: rgb(249, 62, 62);
+}
+
+.content-nav:hover .sub-menu {
+    display: block;
+}
+
+
 /* End Header mobile  */
 
 
@@ -197,7 +234,79 @@ h5.modal-title {
 /* wrapper =========
 ======================================5.section  Phần Product =================================================*/
 
-image-popup {
+div#nz-div {
+    border-bottom: 2px solid red;
+    margin-bottom: 40px;
+    display: block;
+}
+
+#nz-div h3.tde {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+#nz-div h3.tde:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-left: 20px solid #EA3A3C;
+    border-bottom: 0px solid transparent;
+    border-right: 0 solid transparent;
+    position: absolute;
+    top: 0px;
+    /* right: -20px; */
+}
+
+#nz-div h3.tde span {
+    background: #EA3A3C;
+    padding: 10px 20px 8px 20px;
+    color: white;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+.sub-cat {
+    display: inline-block;
+    margin: 0;
+    line-height: 45px;
+    /* margin-left: 100px; */
+    float: right;
+}
+
+.pull-right {
+    margin-right: 0 !important;
+}
+
+.vi-right-link li:first-child {
+    margin-left: 0;
+}
+
+.vi-right-link li {
+    color: #555;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.vi-right-link a.vi-more,
+.vi-right-link a:hover {
+    color: #f20303;
+}
+
+.vi-right-link a.vi-more:after {
+    content: "f101";
+    font-family: FontAwesome;
+    margin-left: 4px;
+}
+
+
+/* End Title  */
+
+.image-popup {
     display: flex !important;
 }
 
@@ -208,7 +317,7 @@ image-popup {
 }
 
 .wrapper {
-    padding: 2rem;
+    padding: 0rem;
 }
 
 .products ul {
@@ -346,8 +455,406 @@ image-popup {
 .product {
     /* padding-top: 10px;
     padding-bottom: 5px; */
-    padding: 10px 0px 5px;
+    /* padding: 10px 0px 5px; */
+    background: inherit;
 }
+
+
+/*---------------------
+  Product Details
+-----------------------*/
+
+.product-details {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.product__details__pic {
+    overflow: hidden;
+}
+
+.product__details__pic__left {
+    width: 22%;
+    max-height: 574px;
+    float: left;
+    overflow-y: auto;
+}
+
+.product__details__pic__left .pt {
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.product__details__pic__left .pt::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.product__details__pic__left .pt.active::after {
+    opacity: 0.3;
+}
+
+.product__details__pic__left .pt:last-child {
+    margin-bottom: 0;
+}
+
+.product__details__pic__left .pt img {
+    min-width: 100%;
+}
+
+.product__details__slider__content {
+    width: calc(78% - 20px);
+    float: left;
+    margin-left: 20px;
+}
+
+.product__details__pic__slider.owl-carousel .owl-nav button {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    font-size: 22px;
+    color: #111111;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    line-height: 44px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.product__details__pic__slider.owl-carousel .owl-nav button.owl-next {
+    left: auto;
+    right: 10px;
+}
+
+.product__details__text h3 {
+    color: #111111;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.product__details__text h3 span {
+    display: block;
+    font-size: 14px;
+    color: #444444;
+    text-transform: none;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.product__details__text .rating {
+    margin-bottom: 16px;
+}
+
+.product__details__text .rating i {
+    font-size: 12px;
+    color: #e3c01c;
+    margin-right: -4px;
+}
+
+.product__details__text .rating span {
+    font-size: 12px;
+    color: #666666;
+    margin-left: 5px;
+}
+
+.product__details__text p {
+    color: #444444;
+    margin-bottom: 28px;
+}
+
+.product__details__price {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ca1515;
+    margin-bottom: 30px;
+}
+
+.product__details__price span {
+    font-size: 18px;
+    color: #b1b0b0;
+    text-decoration: line-through;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.quantity {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.quantity>span {
+    font-size: 14px;
+    color: #111111;
+    font-weight: 600;
+    float: left;
+    margin-top: 14px;
+    margin-right: 15px;
+}
+
+.pro-qty {
+    height: 50px;
+    width: 150px;
+    border: 1px solid #ebebeb;
+    border-radius: 50px;
+    padding: 0 20px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.pro-qty .qtybtn {
+    font-size: 14px;
+    color: #666666;
+    cursor: pointer;
+    float: left;
+    width: 12px;
+    line-height: 46px;
+}
+
+.pro-qty input {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 500;
+    border: none;
+    float: left;
+    width: 84px;
+    text-align: center;
+    height: 48px;
+}
+
+.product__details__button {
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.product__details__button .cart-btn {
+    display: inline-block;
+    font-size: 14px;
+    color: #ffffff;
+    background: #ca1515;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 14px 30px 15px;
+    border-radius: 50px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.product__details__button ul {
+    float: left;
+}
+
+.product__details__button ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.product__details__button ul li:last-child {
+    margin-right: 0;
+}
+
+.product__details__button ul li a {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    padding-top: 1px;
+}
+
+.product__details__button ul li a span {
+    font-size: 18px;
+    color: #666666;
+}
+
+.product__details__widget {
+    border-top: 1px solid #ebebeb;
+    padding-top: 35px;
+}
+
+.product__details__widget ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.product__details__widget ul li:last-child {
+    margin-bottom: 0;
+}
+
+.product__details__widget ul li span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111111;
+    width: 150px;
+    float: left;
+}
+
+.product__details__widget ul li .stock__checkbox {
+    overflow: hidden;
+}
+
+.product__details__widget ul li .stock__checkbox label {
+    display: block;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #666666;
+    position: relative;
+    cursor: pointer;
+}
+
+.product__details__widget ul li .stock__checkbox label input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.product__details__widget ul li .stock__checkbox label input:checked~.checkmark {
+    border-color: #ca1515;
+}
+
+.product__details__widget ul li .stock__checkbox label input:checked~.checkmark:after {
+    border-color: #ca1515;
+    opacity: 1;
+}
+
+.product__details__widget ul li .stock__checkbox label .checkmark {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #444444;
+    border-radius: 2px;
+}
+
+.product__details__widget ul li .stock__checkbox label .checkmark:after {
+    position: absolute;
+    left: 0px;
+    top: -2px;
+    width: 11px;
+    height: 5px;
+    border: solid #ffffff;
+    border-width: 1.5px 1.5px 0px 0px;
+    -webkit-transform: rotate(127deg);
+    -ms-transform: rotate(127deg);
+    transform: rotate(127deg);
+    opacity: 0;
+    content: "";
+}
+
+.product__details__widget ul li .color__checkbox label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    margin-right: 20px;
+}
+
+.product__details__widget ul li .color__checkbox label.active input~.checkmark:after {
+    border-color: #ffffff;
+    opacity: 1;
+}
+
+.product__details__widget ul li .color__checkbox label:last-child {
+    margin-right: 0;
+}
+
+.product__details__widget ul li .color__checkbox label input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.product__details__widget ul li .color__checkbox label input:checked~.checkmark:after {
+    border-color: #ffffff;
+    opacity: 1;
+}
+
+.product__details__widget ul li .color__checkbox label .checkmark {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    height: 20px;
+    width: 20px;
+    background: #e31e2f;
+    border-radius: 50%;
+    content: "";
+}
+
+.product__details__widget ul li .color__checkbox label .checkmark.black-bg {
+    background: #111111;
+}
+
+.product__details__widget ul li .color__checkbox label .checkmark.grey-bg {
+    background: #e4aa8b;
+}
+
+.product__details__widget ul li .color__checkbox label .checkmark:after {
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    width: 13px;
+    height: 6px;
+    border: solid #ffffff;
+    border-width: 1.5px 1.5px 0px 0px;
+    -webkit-transform: rotate(127deg);
+    -ms-transform: rotate(127deg);
+    transform: rotate(127deg);
+    opacity: 0;
+    content: "";
+}
+
+.product__details__widget ul li .size__btn label {
+    font-size: 14px;
+    color: #666666;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.product__details__widget ul li .size__btn label:last-child {
+    margin-right: 0;
+}
+
+.product__details__widget ul li .size__btn label.active {
+    color: #ca1515;
+}
+
+.product__details__widget ul li .size__btn label input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.product__details__widget ul li p {
+    margin-bottom: 0;
+    color: #666666;
+}
+
+.product__details__tab {
+    padding-top: 80px;
+    margin-bottom: 65px;
+}
+
+
+/* ================================End Detail Products ================================ */
 
 
 /* 

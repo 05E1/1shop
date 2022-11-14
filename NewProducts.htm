@@ -1,0 +1,186 @@
+<!-- <script>
+    app.controller('MenController', function($scope, $http) {
+        $scope.datas = new Array;
+        $http.get("datapro.json").then(function(response) {
+            $scope.datas = JSON.parse(response);
+        });
+        $scope.DataProduct = $scope.datas;
+    });
+</script> -->
+<div class="products">
+    <div class="ItemProdcuct">
+
+        <ul>
+            <!-- <li ng-repeat="dpr in DataProduct" class="main-product ">
+                <div class="img-product ">
+                    <img class="img-prd " src="img/4X6Mu.png" alt=" ">
+                </div>
+                <div class="content-product ">
+                    <h3 class="content-product-h3 "> {{dpr.NameSP}}</h3>
+                    <div class="content-product-deltals ">
+                        <div class="price ">
+                            <span class="money ">{{dpr.Price}}</span>
+                        </div>
+                        <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
+
+                    </div>
+                </div>
+            </li> -->
+
+
+            <li class="main-product ">
+                <div class="img-product ">
+                    <img class="img-prd " src="img/4X6Mu.png" alt=" ">
+                </div>
+                <div class="content-product ">
+                    <h3 class="content-product-h3 ">Thời trang nam</h3>
+                    <div class="content-product-deltals ">
+                        <div class="price ">
+                            <span class="money ">25000đ</span>
+                        </div>
+                        <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="main-product ">
+                <div class="img-product ">
+                    <img class="img-prd " src="img/4X6Mu.png" alt=" ">
+                </div>
+                <div class="content-product ">
+                    <h3 class="content-product-h3 ">Thời trang nam</h3>
+                    <div class="content-product-deltals ">
+                        <div class="price ">
+                            <span class="money ">25000đ</span>
+                        </div>
+                        <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
+
+                    </div>
+                </div>
+            </li>
+            <li class="main-product ">
+                <div class="img-product ">
+                    <img class="img-prd " src="img/4X6Mu.png" alt=" ">
+                </div>
+                <div class="content-product ">
+                    <h3 class="content-product-h3 ">Thời trang nam</h3>
+                    <div class="content-product-deltals ">
+                        <div class="price ">
+                            <span class="money ">25000đ</span>
+                        </div>
+                        <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
+
+                    </div>
+                </div>
+            </li>
+            <li class="main-product ">
+                <div class="img-product ">
+                    <img class="img-prd " src="img/4X6Mu.png" alt=" ">
+                </div>
+                <div class="content-product ">
+                    <h3 class="content-product-h3 ">Thời trang nam</h3>
+                    <div class="content-product-deltals ">
+                        <div class="price ">
+                            <span class="money ">25000đ</span>
+                        </div>
+                        <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
+
+                    </div>
+                </div>
+            </li>
+            <li class="main-product ">
+                <div class="img-product ">
+                    <img class="img-prd " src="img/4X6Mu.png" alt=" ">
+                </div>
+                <div class="content-product ">
+                    <h3 class="content-product-h3 ">Thời trang nam</h3>
+                    <div class="content-product-deltals ">
+                        <div class="price ">
+                            <span class="money ">25000đ</span>
+                        </div>
+                        <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
+
+                    </div>
+                </div>
+            </li>
+            <li class="main-product ">
+                <div class="img-product ">
+                    <img class="img-prd " src="img/4X6Mu.png" alt=" ">
+                </div>
+                <div class="content-product ">
+                    <h3 class="content-product-h3 ">Thời trang nam</h3>
+                    <div class="content-product-deltals ">
+                        <div class="price ">
+                            <span class="money ">25000đ</span>
+                        </div>
+                        <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- <ul>
+        <li class="main-product ">
+            <div class="img-product ">
+                <img class="img-prd " src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sualai.jpg?v=1573720306000 " alt=" ">
+            </div>
+            <div class="content-product ">
+                <h3 class="content-product-h3 ">Thời trang nam</h3>
+                <div class="content-product-deltals ">
+                    <div class="price ">
+                        <span class="money ">25000đ</span>
+                    </div>
+                    <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
+
+                </div>
+            </div>
+        </li>
+        <li class="main-product ">
+            <div class="img-product ">
+                <img class="img-prd " src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/isd1760-thu-am-thanh-phat-am-thanh-2.jpg?v=1568951032960 " alt=" ">
+            </div>
+            <div class="content-product ">
+                <h3 class="content-product-h3 ">Quần âu Nam</h3>
+                <div class="content-product-deltals ">
+                    <div class="price ">
+                        <span class="money ">115000đ</span>
+                    </div>
+                    <button type="button " class="btn btn-cart ">Thêm Vào Giỏ</button>
+                </div>
+            </div>
+        </li>
+        <li class="main-product ">
+            <div class="img-product ">
+                <img class="img-prd " src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/new-arrival-b-plus-64-bit-quad-2.jpg?v=1568277329707 " alt=" ">
+            </div>
+            <div class="content-product ">
+                <h3 class="content-product-h3 ">Raspberry Pi 3 E14 Model B Plus B+ 2.4G/5G Bluetooth</h3>
+                <div class="content-product-deltals ">
+                    <div class="price ">
+                        <span class="money ">1295000đ</span>
+                    </div>
+                    <button type="button " class="btn btn-cart ">Thêm Vào Giỏ</button>
+                </div>
+            </div>
+        </li>
+        <li class="main-product no-margin ">
+            <div class="img-product ">
+                <img class="img-prd " src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/module-iot-esp8266-esp-12e-ch340-3.jpg?v=1565950165000 " alt=" ">
+            </div>
+            <div class="content-product ">
+                <h3 class="content-product-h3 ">Module IOT ESP8266 ESP-12E CH340 V3</h3>
+                <div class="content-product-deltals ">
+                    <div class="price ">
+                        <span class="money ">85000đ</span>
+                    </div>
+                    <button type="button " class="btn btn-cart ">Thêm Vào Giỏ</button>
+                </div>
+            </div>
+        </li>
+        </ul> -->
+
+    <script src="js/controller.js "></script>
+</div>
