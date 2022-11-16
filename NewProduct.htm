@@ -1,24 +1,29 @@
-<!-- Product Section Begin -->
-<section class="product spad">
+<!-- Product New Section Begin -->
+<section class="product">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
-                <div class="section-title">
-                    <h4>New product</h4>
+        <div id="nz-div" class="row tde">
+            <div class="col-lg-4 col-md-4 ">
+                <div class=" " ng-if="IDGroups!='Contact' ">
+                    <h3 class="tde"><span class="null">Products {{IDGroups}}</span></h3>
+                    <div class="row vi-right-link pull-right col-lg-8 col-md-8 col-sx-4 col-sm-4 ">
+                        <ul>
+                            <li class="active" data-filter="*">All</li>
+                            <li data-filter=".women">
+                                <a href="#">Women’s </a>
+                            </li>
+                            <li data-filter=".men">Men’s</li>
+                            <li data-filter=".kid">Kid’s</li>
+                            <li data-filter=".accessories">Accessories</li>
+                            <li data-filter=".cosmetic">Cosmetics</li>
+                        </ul>
+                        <a class="vi-more" href="#">Xem tất cả »</a>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-8 col-md-8">
-                <ul class="filter__controls">
-                    <li class="active" data-filter="*">All</li>
-                    <li data-filter=".women">Women’s</li>
-                    <li data-filter=".men">Men’s</li>
-                    <li data-filter=".kid">Kid’s</li>
-                    <li data-filter=".accessories">Accessories</li>
-                    <li data-filter=".cosmetic">Cosmetics</li>
-                </ul>
-            </div>
+
         </div>
-        <div class="row property__gallery">
+
+        <div class="row property__gallery ">
             <div class="col-lg-3 col-md-4 col-sm-6 mix women">
                 <div class="product__item">
                     <div class="product__item__pic set-bg" style="background-image: url('img/product/product-1.jpg');height: 50vh;">

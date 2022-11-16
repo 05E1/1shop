@@ -8,17 +8,17 @@
     });
 </script> -->
 
-<div class="parallax ms-3 p-5 text-center shadow-1-strong rounded mb-5 text-success">
+<div class="parallax ms-8 p-8 text-center shadow-1-strong rounded mb-5 text-success">
     <h1>Giới thiệu sản phẩm thời trang </h1>
     <p> Live show fashion online </p>
     <p> Live tream online at FPT-05E-Shop </p>
 </div>
 <section class="product ">
-    <div class="container">
-        <!-- <div class="row parallax" >
+    <div class="container ">
+        <!-- <div class="row">
             <div class="col-lg-8 col-md-8" ng-controller="main_controller">
                 <ul class="filter__controls" ng-repeat="subItem in sublists">
-                    <li ng-repeat="subItem in sublists">
+                    <li>
                         <a href="#!{{subItem.Url}}"><i class="{{subItem.icon}}"> </i>
                                  {{subItem.Name}} </a>
                     </li>
@@ -26,27 +26,36 @@
                 </ul>
             </div>
         </div> -->
-        <div class="row property__gallery" ng-controller="MenController">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix women" ng-repeat="x in DataProdut | filter:{IDGroup: IDGroups} ">
+        <div id="nz-div" class="row tde">
+            <div class="col-lg-4 col-md-4 ">
+                <div>
+                    <h3 class="tde"><span class="null">Products {{IDGroups}}</span></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row property__gallery " ng-controller="MenController">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix women" ng-repeat="x in DataProdut | filter:{IDGroup: 'Men'} ">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" style="background-image: url('img/product/product-2.jpg');height: 50vh;">
-                        <div class="label new">New</div>
-                        <ul class="product__hover">
-                            <li><a href="img/product/product-1.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                            <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                            <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
+                    <div class="product__item__pic set-bg" style="background-image: url('img/product/{{x.Images[0]}}' );height: 50vh; ">
+                        <div class="label new ">New</div>
+                        <ul class="product__hover ">
+                            <li>
+                                <!-- <a href="#!Detailsp" class="image-popup "><span class="arrow_expand "></span></a></li> -->
+                                <li><a href="# "><span class="fa fa-heart "></span></a></li>
+                                <li><a href="# "><span class="fa fa-shopping-bag "></span></a></li>
                         </ul>
                     </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">{{x.NameSP}}</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                    <div class="product__item__text ">
+                        <h6><a href="#!Detailsp " ng-click="FnShowSectionSP() ">{{x.NameSP}}</a></h6>
+                        <div class="rating ">
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
                         </div>
-                        <div class="product__price">{{x.Price}}</div>
+                        <div class="product__price ">{{x.Price}}</div>
                     </div>
                 </div>
             </div>
@@ -55,332 +64,4 @@
     </div>
 </section>
 
-
-
-
-<!-- 
-    <div class="parallax ms-3   p-5 text-center shadow-1-strong rounded mb-5 text-success">
-        <h1>Giới thiệu sản phẩm thời trang </h1>
-        <p> Live show fashion online </p>
-        <p> Live tream online at FPT-05E-Shop </p>
-    </div>
-    <section class="product spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="section-title">
-                        <h4>Products Men</h4>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8">
-                    <ul class="filter__controls">
-                        <li class="active" data-filter="*">All</li>
-                        <li data-filter=".women">BOSS’s</li>
-                        <li data-filter=".men">Owen</li>
-                        <li data-filter=".kid">DIOR</li>
-                        <li data-filter=".accessories">VERSACE</li>
-                        <li data-filter=".cosmetic">GUCCI</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row property__gallery">
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" style="background-image: url('img/product/product-2.jpg');height: 50vh;">
-                            <div class="label new">New</div>
-                            <ul class="product__hover">
-                                <li><a href="img/product/product-1.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                                <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Buttons tweed blazer</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix men">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" style="background-image: url('img/product/product-3.jpg');height: 50vh;">
-                            <ul class="product__hover">
-                                <li><a href="img/product/product-2.jpg"><span class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                                <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Flowy striped skirt</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 49.0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix accessories">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" style="background-image: url('img/product/product-1.jpg');height: 50vh;">
-                            <div class="label stockout">out of stock</div>
-                            <div> <a href="img/product/product-3.jpg" class="image-popup"><span class="arrow_expand">View</span></a></div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Cotton T-Shirt</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price col-2 ">
-                                $ 59.0
-
-                                <ul class="product__hover">
-                                    <li></li>
-                                    <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                                </ul>
-
-
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix cosmetic">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" style="background-image: url('img/product/product-4.jpg');height: 50vh;">
-                            <ul class="product__hover">
-                                <li><a href="img/product/product-4.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                                <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Slim striped pocket shirt</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix kid">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" style="background-image: url('img/product/product-5.jpg');height: 50vh;">
-                            <ul class="product__hover">
-                                <li>
-                                    <a href="img/product/product-5.jpg" class="image-popup fa fa-street-view " aria-hidden="true "> <span class="arrow_expand"></span></a>
-                                </li>
-                                <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                                <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Fit micro corduroy shirt</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                    <div class="product__item sale">
-                        <div class="product__item__pic set-bg" style="background-image: url('img/product/product-6.jpg');height: 50vh;">
-                            <div class="label sale">Sale</div>
-                            <ul class="product__hover">
-                                <li><a href="img/product/product-6.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                                <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Tropical Kimono</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" style="background-image: url('img/product/product-7.jpg');height: 50vh;">
-                            <ul class="product__hover">
-                                <li><a href="img/product/product-7.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                                <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Contrasting sunglasses</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                    <div class="product__item sale">
-                        <div class="product__item__pic set-bg" style="background-image: url('img/product/product-1.jpg');height: 50vh;">
-                            <div class="label">Sale</div>
-                            <ul class="product__hover">
-                                <li><a href="img/product/product-8.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="fa fa-heart" aria-hidden="true"></i></span></a></li>
-                                <li><a href="#"><span class="fa fa-shopping-bag" aria-hidden="true"></i></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Water resistant backpack</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-<!-- ==================================================================KẾT THÚC PHẦN ĐÃ OK  -->
-
-
-
-
-<!-- <div class="products">
-    <div class="ItemProdcuct">
-
-        <ul>
-            <li ng-repeat="dpr in DataProduct" class="main-product ">
-                <div class="img-product ">
-                    <img class="img-prd " src="~/img/4X6Mu.png" alt=" ">
-                </div>
-                <div class="content-product ">
-                    <h3 class="content-product-h3 "> {{dpr.NameSP}}</h3>
-                    <div class="content-product-deltals ">
-                        <div class="price ">
-                            <span class="money ">{{dpr.Price}}</span>
-                        </div>
-                        <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
-
-                    </div>
-                </div>
-            </li>
-
-
-            <li class="main-product ">
-                <div class="img-product ">
-                    <img class="img-prd " src="../img/4X6Mu.png" alt=" ">
-                </div>
-                <div class="content-product ">
-                    <h3 class="content-product-h3 ">Thời trang nam</h3>
-                    <div class="content-product-deltals ">
-                        <div class="price ">
-                            <span class="money ">25000đ</span>
-                        </div>
-                        <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
-
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div> -->
-
-<!-- <ul>
-        <li class="main-product ">
-            <div class="img-product ">
-                <img class="img-prd " src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sualai.jpg?v=1573720306000 " alt=" ">
-            </div>
-            <div class="content-product ">
-                <h3 class="content-product-h3 ">Thời trang nam</h3>
-                <div class="content-product-deltals ">
-                    <div class="price ">
-                        <span class="money ">25000đ</span>
-                    </div>
-                    <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
-
-                </div>
-            </div>
-        </li>
-        <li class="main-product ">
-            <div class="img-product ">
-                <img class="img-prd " src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/isd1760-thu-am-thanh-phat-am-thanh-2.jpg?v=1568951032960 " alt=" ">
-            </div>
-            <div class="content-product ">
-                <h3 class="content-product-h3 ">Quần âu Nam</h3>
-                <div class="content-product-deltals ">
-                    <div class="price ">
-                        <span class="money ">115000đ</span>
-                    </div>
-                    <button type="button " class="btn btn-cart ">Thêm Vào Giỏ</button>
-                </div>
-            </div>
-        </li>
-        <li class="main-product ">
-            <div class="img-product ">
-                <img class="img-prd " src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/new-arrival-b-plus-64-bit-quad-2.jpg?v=1568277329707 " alt=" ">
-            </div>
-            <div class="content-product ">
-                <h3 class="content-product-h3 ">Raspberry Pi 3 E14 Model B Plus B+ 2.4G/5G Bluetooth</h3>
-                <div class="content-product-deltals ">
-                    <div class="price ">
-                        <span class="money ">1295000đ</span>
-                    </div>
-                    <button type="button " class="btn btn-cart ">Thêm Vào Giỏ</button>
-                </div>
-            </div>
-        </li>
-        <li class="main-product no-margin ">
-            <div class="img-product ">
-                <img class="img-prd " src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/module-iot-esp8266-esp-12e-ch340-3.jpg?v=1565950165000 " alt=" ">
-            </div>
-            <div class="content-product ">
-                <h3 class="content-product-h3 ">Module IOT ESP8266 ESP-12E CH340 V3</h3>
-                <div class="content-product-deltals ">
-                    <div class="price ">
-                        <span class="money ">85000đ</span>
-                    </div>
-                    <button type="button " class="btn btn-cart ">Thêm Vào Giỏ</button>
-                </div>
-            </div>
-        </li>
-        </ul> -->
-
-<script src="js/MensController.js"></script>
 </div>

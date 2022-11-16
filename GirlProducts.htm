@@ -1,365 +1,125 @@
-<!-- Product Section Begin -->
-<section class="product spad">
+<!-- <script>
+    app.controller('MenController', function($scope, $http) {
+        $scope.datas = new Array;
+        $http.get("datapro.json").then(function(response) {
+            $scope.datas = JSON.parse(response);
+        });
+        $scope.DataProduct = $scope.datas;
+    });
+</script> -->
+
+<!-- <div class="parallax ms-3 p-5 text-center shadow-1-strong rounded mb-5 text-success">
+    <h1>Giới thiệu sản phẩm thời trang </h1>
+    <p> Live show fashion online </p>
+    <p> Live tream online at FPT-05E-Shop </p>
+</div> -->
+<section class="product p-3 mt-3 ">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
-                <div class="section-title">
-                    <h4>Products Girl's </h4>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-8">
-                <ul class="filter__controls">
-                    <li class="active" data-filter="*">All</li>
-                    <li data-filter=".women">Hermes’s</li>
-                    <li data-filter=".men">Burberry</li>
-                    <li data-filter=".kid">Prada</li>
-                    <li data-filter=".accessories">Louis vuitton </li>
-                    <li data-filter=".cosmetic">GUCCI</li>
+        <!-- <div class="row parallax">
+            <div class="col-lg-8 col-md-8" ng-controller="main_controller">
+                <ul class="filter__controls" ng-repeat="subItem in sublists">
+                    <li ng-repeat="subItem in sublists">
+                        <a href="#!{{subItem.Url}}"><i class="{{subItem.icon}}"> </i>
+                                 {{subItem.Name}} </a>
+                    </li>
+
                 </ul>
             </div>
+        </div> -->
+        <div id="nz-div" class="row tde">
+            <div class="col-lg-4 col-md-4 ">
+                <div>
+                    <h3 class="tde"><span class="null">Products {{IDGroups}}</span></h3>
+                </div>
+            </div>
         </div>
-        <div class="row property__gallery">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix women">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" style="background-image: url('img/product/product-1.jpg');height: 50vh;">
-                        <div class="label new">New</div>
-                        <ul class="product__hover">
-                            <li><a href="../img/product-1.jpg" class="image-popup"><span class="fa fa-street-view"></span></a></li>
-                            <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                            <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
+        <div class="row property__gallery ">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix women" ng-repeat="x in DataProdut | filter:{IDGroup: 'Girl'} ">
+                <div class="product__item parallax_Men">
+                    <div class="product__item__pic set-bg" style="background-image: url('img/product/{{x.Images[0]}}' );height: 50vh; ">
+                        <div class="label new ">New</div>
+                        <ul class="product__hover ">
+                            <!-- <li><a href="#!Detailsp" class="image-popup "><span class="arrow_expand "></span></a></li> -->
+                            <li><a href="# "><span class="fa fa-heart "></span></a></li>
+                            <li><a href="# "><span class="fa fa-shopping-bag "></span></a></li>
                         </ul>
                     </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Buttons tweed blazer</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                    <div class="product__item__text team-item rounded ">
+                        <h6><a href="#!Detailsp" ng-click="FnShowSectionSP() ">{{x.NameSP}}</a></h6>
+                        <div class="rating ">
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
                         </div>
-                        <div class="product__price">$ 59.0</div>
+                        <div class="product__price ">{{x.Price}}</div>
+                    </div>
+                    <div class="team-text text-center bg-white p-4 ">
+                        <h5>Tom Ford</h5>
+                        <span>500.000 $</span>
+                        <div class="d-flex justify-content-center ">
+                            <a class="btn btn-square btn-light m-1 " href=" "><i class="fab fa-twitter "></i></a>
+                            <a class="btn btn-square btn-light m-1 " href=" "><i class="fab fa-facebook-f "></i></a>
+                            <a class="btn btn-square btn-light m-1 " href=" "><i class="fab fa-youtube "></i></a>
+                            <a class="btn btn-square btn-light m-1 " href=" "><i class="fa fa-shopping-bag "></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix men">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" style="background-image: url('img/product/product-2.jpg');height: 50vh;">
-                        <ul class="product__hover">
-                            <li><a href="../img/product-2.jpg" class="image-popup"><span class="fa fa-street-view"></span></a></li>
-                            <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                            <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Flowy striped skirt</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 49.0</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix accessories">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" style="background-image: url('img/product/product-3.jpg');height: 50vh;">
-                        <div class="label stockout">out of stock</div>
-                        <ul class="product__hover">
-                            <li><a href="../img/product-3.jpg" class="image-popup"><span class="fa fa-street-view"></span></a></li>
-                            <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                            <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Cotton T-Shirt</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix cosmetic">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" style="background-image: url('img/product/product-4.jpg');height: 50vh;">
-                        <ul class="product__hover">
-                            <li><a href="../img/product-4.jpg" class="image-popup"><span class="fa fa-street-view"></span></a></li>
-                            <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                            <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Slim striped pocket shirt</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix kid">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" style="background-image: url('img/product/product-5.jpg');height: 50vh;">
-                        <ul class="product__hover">
-                            <li><a href="../img/product-5.jpg" class="image-popup"><span class="fa fa-street-view"></span></a></li>
-                            <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                            <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Fit micro corduroy shirt</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                <div class="product__item sale">
-                    <div class="product__item__pic set-bg" style="background-image: url('img/product/product-6.jpg');height: 50vh;">
-                        <div class="label sale">Sale</div>
-                        <ul class="product__hover">
-                            <li><a href="../img/product-6.jpg" class=" image-popup "><span class="fa fa-street-view"></span></a></li>
-                            <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                            <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Tropical Kimono</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                <div class="product__item">
-                    <div class="product__item__pic set-bg" style="background-image: url('img/product/product-7.jpg');height: 50vh;">
-                        <ul class="product__hover">
-                            <li><a href="../img/product-7.jpg" class="image-popup"><span class="fa fa-street-view"></span></a></li>
-                            <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                            <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Contrasting sunglasses</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                <div class="product__item sale">
-                    <div class="product__item__pic set-bg" style="background-image: url('img/product/product-8.jpg');height: 50vh;">
-                        <div class="label">Sale</div>
-                        <ul class="product__hover">
-                            <li><a href="../img/product-8.jpg" class="image-popup  "><span class="fa fa-street-view"></span></a></li>
-                            <li><a href="#"><span class="fa fa-heart"></span></a></li>
-                            <li><a href="#"><span class="fa fa-shopping-bag"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="product__item__text">
-                        <h6><a href="#">Water resistant backpack</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
+
+</div>
+
+
+
+
+<!-- Product Section Begin    ng-controller="SearchController " ng-controller="GirlController " -->
+<!-- <section class="product mt-4">
+    <div class="container">
+
+        <div id="nz-div " class="row tde ">
+            <div class="col-lg-4 col-md-4 ">
+                <div>
+                    <h3 class="tde "><span class="null ">Products {{IDGroups}}</span></h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="row property__gallery " ng-controller="GirlController">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix women " ng-repeat="x in DataProdut | filter:{IDGroup: 'Girl' ">
+
+                <div class="product__item ">
+                    <div class="product__item__pic set-bg " style="background-image: url( 'img/product/{{x.Images[0].FileName}}');height: 50vh; ">
+                        <div class="label new ">New</div>
+                        <ul class="product__hover ">
+                            <li><a href="img/product/{{x.Images[0].FileName}} " class="image-popup "><span class="fa fa-street-view "></span></a></li>
+                            <li><a href="# "><span class="fa fa-heart "></span></a></li>
+                            <li><a href="# "><span class="fa fa-shopping-bag "></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text ">
+                        <h6><a href="#!Detailsp " ng-click="FnShowSectionSP() ">{{x.NameSP}}</a></h6>
+                        <div class="rating ">
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                            <i class="fa fa-star "></i>
+                        </div>
+                        <div class="product__price ">{{x.Price}}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section> -->
+
+
+
 <!-- Product Section End -->
 <!-- Sản phẩm test lấy từ Json -->
-
-
-<div class="products">
-
-    <div class="product_list">
-
-        <!-- <div class="tab-pane container container_full_width--lg_down active" id="product-search-results" role="tabpanel" aria-expanded="true">
-            Tìm kiếm
-        </div>
-        <div id="content-search-results " class="js-content_search_result row content-grid-header justify-content-center ">
-            Tên modul
-        </div> -->
-        <div class="row flex-nowrap container-fluid">
-            <!-- <lable> Hiện thị thông tin sản phẩm </lable> -->
-            <!--  Hiển thị thông tin sản phẩm  -->
-
-            <div class="ItemProdcuct">
-
-                <ul>
-                    <li ng-repeat="dpr in DataProducts" class="main-product ">
-                        <div class="img-product ">
-                            <img class="img-prd " src="~/img/4X6Mu.png" alt=" ">
-                        </div>
-                        <div class="content-product ">
-                            <h3 class="content-product-h3 "> {{dpr.NameSP}}</h3>
-                            <div class="content-product-deltals ">
-                                <div class="price ">
-                                    <span class="money ">{{dpr.Price}}</span>
-                                </div>
-                                <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
-
-                            </div>
-                        </div>
-                    </li>
-
-
-                    <!-- <li class="main-product ">
-                        <div class="img-product ">
-                            <img class="img-prd " src="img/4X6Mu.png" alt=" ">
-                        </div>
-                        <div class="content-product ">
-                            <h3 class="content-product-h3 ">Thời trang nam</h3>
-                            <div class="content-product-deltals ">
-                                <div class="price ">
-                                    <span class="money ">25000đ</span>
-                                </div>
-                                <button type="button " class=" btn btn-cart " ng-click="read_input() ">Thêm Vào Giỏ</button>
-
-                            </div>
-                        </div>
-                    </li> -->
-                </ul>
-            </div>
-            <!--  Script thông tin sản phẩm lấy từ script  -->
-            <script>
-                //  var app = angular.module('myApp', []);
-                app.controller('GirlController',
-                    function($scope, $http) {
-
-
-
-                        // var request = {
-                        //     method: 'get',
-                        //     url: 'datapro.json',
-                        //     dataType: 'json',
-                        //     contentType: "application/json"
-                        // };
-
-                        // $scope.arrBirds = new Array;
-
-                        // $http(request)
-                        //     .success(function(jsonData) {
-                        //         $scope.arrBirds = jsonData;
-                        //         $scope.list = $scope.arrBirds;
-                        //     })
-                        //     .error(function() {
-
-                        //     });
-
-
-
-                        $scope.DataPro = [{
-                                "Id": 00001,
-                                "NameSP": "Hamburg Suites",
-                                "Address": "An Der Alster 82",
-                                "Description": "Only a few hundred meters from the city center, enjoy the energy of Hamburg each and every night of your stay in our hotel.",
-                                "Content": "Nhập nội dung chi tiết vào đâu giới thiệu về sản phẩm",
-                                "Discount": 10,
-                                "Price": 299,
-                                "Num": 55,
-                                "size": [{
-                                    "NoSiz": 33,
-                                    "NoSiz": 34,
-                                    "NoSiz": 35,
-                                    "NoSiz": 36
-                                }],
-                                "color ": "vàng",
-                                "Images ": [{
-                                    "FileName": "250x250.png ",
-                                }, {
-                                    "FileName": "400x600.png",
-                                }, {
-                                    "FileName": "400x600.png",
-                                    "widthRatio": 2,
-                                    "heightRatio": 2
-                                }, {
-                                    "FileName": "1500x1500.png",
-                                    "widthRatio": 2,
-                                    "heightRatio": 2
-                                }, {
-                                    "FileName": "Bedroom-1-2.jpg",
-                                }, {
-                                    "FileName": "Bathroom-0.jpg",
-                                }]
-                            }, {
-                                "Id": 00001,
-                                "NameSP": "Hamburg Suites",
-                                "Address": "An Der Alster 82",
-                                "Description": "Only a few hundred meters from the city center, enjoy the energy of Hamburg each and every night of your stay in our hotel.",
-                                "Content": "Nhập nội dung chi tiết vào đâu giới thiệu về sản phẩm",
-                                "Discount": 10,
-                                "Price": 299,
-                                "Num": 55,
-                                "size": [{
-                                    "NoSiz": 33,
-                                    "NoSiz": 34,
-                                    "NoSiz": 35,
-                                    "NoSiz": 36
-                                }],
-                                "color ": "vàng",
-                                "Images ": [{
-                                    "FileName": "250x250.png ",
-                                }, {
-                                    "FileName": "400x600.png",
-                                }, {
-                                    "FileName": "400x600.png",
-                                    "widthRatio": 2,
-                                    "heightRatio": 2
-                                }, {
-                                    "FileName": "1500x1500.png",
-                                    "widthRatio": 2,
-                                    "heightRatio": 2
-                                }, {
-                                    "FileName": "Bedroom-1-2.jpg",
-                                }, {
-                                    "FileName": "Bathroom-0.jpg",
-                                }]
-                            }
-
-                        ];
-
-
-
-                    });
-            </script>
-        </div>
-
-    </div>
-</div>

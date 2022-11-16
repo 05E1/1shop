@@ -1,6 +1,19 @@
 /* 5. Product Section : thực hiện style Produc */
 
 
+/********** Template CSS **********/
+
+ :root {
+    --primary: #313230;
+    /* background: ; */
+    /* #F3BD00;*/
+    --secondary: #757575;
+    --light: #F3F6F8;
+    --dark: #244b0c;
+    --red: #f50404;
+}
+
+
 /* PHẦN Menu Mobile */
 
 
@@ -49,10 +62,10 @@
 }
 
 .item_menu form input {
-    width: 100%;
+    width: 50%;
     border: none;
     background: #fff;
-    padding: 7px;
+    padding: 1px;
     outline: none;
     border-radius: 12px;
 }
@@ -79,7 +92,7 @@
     z-index: 1;
     color: #020201;
     display: block;
-    padding: .8rem 1rem;
+    padding: .5rem 1rem;
     text-decoration: none;
     /* border-left: 1px solid; */
     /* font-weight: 800; */
@@ -225,6 +238,257 @@ h5.modal-title {
 
 #cart:hover {
     border-color: #fff;
+}
+
+
+/*  ====================================================BANER  */
+
+
+/*---------------------
+  Banner
+-----------------------*/
+
+.banner {
+    height: 500px;
+    display: inherit;
+}
+
+.banner__text span {
+    font-size: 18px;
+    color: #ca1515;
+    text-transform: uppercase;
+}
+
+.banner__text h1 {
+    font-size: 80px;
+    color: #111111;
+    font-family: "Cookie", cursive;
+    margin-bottom: 15px;
+}
+
+.banner__text a {
+    font-size: 14px;
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding: 0 0 3px;
+    display: inline-block;
+}
+
+.banner__text a:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #ca1515;
+    content: "";
+}
+
+.banner__slider {
+    text-align: center;
+    padding: 150px 0 0;
+}
+
+.banner__slider.owl-carousel .owl-dots {
+    position: absolute;
+    left: 0;
+    top: 430px;
+    width: 100%;
+    text-align: center;
+}
+
+.banner__slider.owl-carousel .owl-dots button {
+    height: 12px;
+    width: 12px;
+    background: #a1a1a1;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.banner__slider.owl-carousel .owl-dots button.active {
+    background: #ca1515;
+}
+
+.banner__slider.owl-carousel .owl-dots button:last-child {
+    margin-right: 0;
+}
+
+
+/*---------------------
+  Trend
+-----------------------*/
+
+.trend {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.trend__content .section-title h4 {
+    font-size: 20px;
+}
+
+.trend__content .section-title h4:after {
+    bottom: -6px;
+}
+
+.trend__item {
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.trend__item__pic {
+    float: left;
+    margin-right: 25px;
+}
+
+.trend__item__text {
+    overflow: hidden;
+}
+
+.trend__item__text h6 {
+    font-size: 14px;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+.trend__item__text .rating {
+    line-height: 18px;
+    margin-bottom: 6px;
+}
+
+.trend__item__text .rating i {
+    font-size: 10px;
+    color: #e3c01c;
+    margin-right: -4px;
+}
+
+.trend__item__text .rating i:last-child {
+    margin-right: 0;
+}
+
+.trend__item__text .product__price {
+    color: #111111;
+    font-weight: 600;
+}
+
+.trend__item__text .product__price span {
+    font-size: 14px;
+    color: #b1b0b0;
+    text-decoration: line-through;
+    margin-left: 4px;
+}
+
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.spad {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+/*---------------------
+  Services
+-----------------------*/
+
+.services {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.services__item {
+    padding-left: 65px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.services__item i {
+    font-size: 36px;
+    color: #ca1515;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+.services__item h6 {
+    color: #111111;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.services__item p {
+    margin-bottom: 0;
+}
+
+
+/*---------------------
+  Instagram
+-----------------------*/
+
+.instagram__item {
+    height: 320px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.instagram__item:hover:after {
+    opacity: 1;
+}
+
+.instagram__item:hover .instagram__text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.instagram__item:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    content: "";
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+}
+
+.instagram__text {
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+}
+
+.instagram__text i {
+    font-size: 30px;
+    color: #0d0d0d;
+}
+
+.instagram__text a {
+    font-size: 16px;
+    color: #0d0d0d;
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
 }
 
 
@@ -383,6 +647,57 @@ div#nz-div {
 }
 
 
+/* ---------------------------------------------------------------------Main Item 
+Css Main Home
+=================================================== */
+
+
+/*** Team ***/
+
+.team-item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+}
+
+.team-item img {
+    transition: .5s;
+}
+
+.team-item:hover img {
+    transform: scale(1.1);
+}
+
+.team-text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -50px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.team-item:hover .team-text {
+    bottom: 0;
+    opacity: 1;
+}
+
+.team-item a.btn {
+    color: var(--primary);
+}
+
+.team-item a.btn:hover {
+    color: var(--red);
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.team-item a {
+    color: #050505;
+    text-decoration: none;
+}
+
+
 /*---------------------
   5.Section Product
 -----------------------*/
@@ -392,6 +707,7 @@ div#nz-div {
     background-image: url("../img/Ground.png");
     /* Full height */
     /* height: 50%; */
+    width: 100%;
     min-height: 300px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -401,22 +717,42 @@ div#nz-div {
     font-weight: 5em !important;
 }
 
+.parallax_psnew {
+    /* The image used */
+    background-image: url("../img/KhungBG16.png");
+    /* Full height */
+    /* height: 50%; */
+    width: 100%;
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-weight: 5em !important;
+}
+
 .parallax {
     /* The image used */
     background-image: url("../img/banner/banner-1.jpg");
     /* Full height */
     /* height: 50%; */
-    height: 200px;
+    /* height: 200px; */
     /* min-height: 300px; */
     /* Create the parallax scrolling effect */
+    width: 100%;
+    height: 180px;
+    opacity: 0.8;
+    z-index: 999;
+    min-height: 300px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     font-weight: 5em !important;
 }
 
-.parallax_Men {
+.parallax_new {
     /* The image used */
     /* background: #000; */
     /* position: fixed; */
@@ -426,7 +762,29 @@ div#nz-div {
     height: 100%;
     opacity: 0.8;
     z-index: 999;
-    background-image: url("..img/Ground.png");
+    background-image: url("..img/KhungBG18.png");
+    /* Full height */
+    /* height: 50%; 
+    min-height: 300px;*/
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 5em !important;
+}
+
+.parallax_main {
+    /* The image used */
+    /* background: #000; */
+    /* position: fixed; */
+    /* left: 0;
+    top: 0; */
+    width: 100%;
+    height: 300px;
+    opacity: 0.8;
+    z-index: 999;
+    background-image: url("..img/KhungBG15.png");
     /* Full height */
     /* height: 50%; 
     min-height: 300px;*/
@@ -442,8 +800,9 @@ div#nz-div {
     /* The image used */
     background-image: url("../img/banner/banner-3.jpg");
     /* Full height */
-    /* height: 50%; */
-    min-height: 300px;
+    height: 50%;
+    width: 50%;
+    /* min-height: 300px; */
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
