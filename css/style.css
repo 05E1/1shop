@@ -498,7 +498,7 @@ h5.modal-title {
 
 
 /*---------------------
-  Categories
+  Categories Main trên Phần giới thiệu Home 
 -----------------------*/
 
 .categories {
@@ -547,6 +547,15 @@ h5.modal-title {
     font-weight: 700;
 }
 
+.categories__img {
+    height: 320px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+}
+
 .categories__text p {
     margin-bottom: 10px;
 }
@@ -554,6 +563,7 @@ h5.modal-title {
 .categories__text a {
     font-size: 14px;
     color: #111111;
+    text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
     position: relative;
@@ -567,7 +577,7 @@ h5.modal-title {
     bottom: 0;
     height: 2px;
     width: 100%;
-    background: #ca1515;
+    background: #fa1818;
     content: "";
 }
 
@@ -580,12 +590,13 @@ h5.modal-title {
 
 div#nz-div {
     border-bottom: 2px solid red;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     display: block;
 }
 
 #nz-div h3.tde {
     margin: 0;
+    margin-bottom: 60px;
     font-size: 16px;
     line-height: 20px;
     display: inline-block;
@@ -596,7 +607,7 @@ div#nz-div {
     content: "";
     width: 0;
     height: 0;
-    border-top: 40px solid transparent;
+    border-top: 60px solid transparent;
     border-left: 20px solid #EA3A3C;
     border-bottom: 0px solid transparent;
     border-right: 0 solid transparent;
@@ -728,7 +739,7 @@ div#nz-div {
 
 
 /* ---------------------------------------------------------------------Main Item 
-Css Main Home
+Css Main Home Giới thiệu các nhà thiết kế nổi tiếng
 =================================================== */
 
 
@@ -902,6 +913,10 @@ Css Main Home
 /*---------------------
   Product Details
 -----------------------*/
+
+.baner_textmen {
+    padding-top: 70px;
+}
 
 .product-details {
     padding-top: 70px;
