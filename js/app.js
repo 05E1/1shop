@@ -961,10 +961,6 @@ var app = angular.module('myapp', ['ngRoute'])
 
 app.config(function($routeProvider) {
     $routeProvider
-    // .when("/", {
-    //     templateUrl: "index.html",
-    //     // controller: "homeController"
-    // })
         .when("/Main", {
             templateUrl: "main.htm",
             controller: "homeController"
