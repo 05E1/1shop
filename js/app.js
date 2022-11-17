@@ -275,7 +275,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 39,
                 }],
                 Colors: "Phối màu",
-                Images: [{
+                Images: ["product-7.jpg", {
                     FileName: "product-8.jpg "
                 }, {
                     FileName1: "00009B.jpg"
@@ -312,7 +312,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 36,
                 }],
                 Colors: "Phối màu",
-                Images: [{
+                Images: ["product-8.jpg", {
                     FileName: "00010A.jpg "
                 }, {
                     FileName1: "00010B.jpg"
@@ -350,7 +350,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 39
                 }],
                 Colors: "Phối màu",
-                Images: [{
+                Images: ["product-9.jpg", {
                     FileName: "00010A.jpg "
                 }, {
                     FileName1: "00010B.jpg"
@@ -387,7 +387,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 41,
                 }],
                 Colors: "Phối màu",
-                Images: [{
+                Images: ["product-10.jpg", {
                     FileName: "00011A.jpg "
                 }, {
                     FileName1: "00011B.jpg"
@@ -424,7 +424,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 40,
                 }],
                 Colors: "Màu trắng",
-                Images: [{
+                Images: ["product-11.jpg", {
                     FileName: "00012A.jpg "
                 }, {
                     FileName1: "00012B.jpg"
@@ -462,7 +462,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 36,
                 }],
                 Colors: "Màu Xanh Nhạt",
-                Images: [{
+                Images: ["product-12.jpg", {
                     FileName: "00013A.jpg "
                 }, {
                     FileName1: "00013B.jpg"
@@ -499,7 +499,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 40,
                 }],
                 Colors: "Màu Trắng",
-                Images: [{
+                Images: ["product-22.jpg", {
                     FileName: "product-9.jpg "
                 }, {
                     FileName1: "00014B.jpg"
@@ -537,7 +537,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 37,
                 }],
                 Colors: "Màu Vàng",
-                Images: [{
+                Images: ["product-23.jpg", {
                     FileName: "product-11.jpg "
                 }, {
                     FileName1: "00015B.jpg"
@@ -575,7 +575,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 39,
                 }],
                 Colors: "Màu Xanh Navy",
-                Images: [{
+                Images: ["product-24.jpg", {
                     FileName: "product-10.jpg "
                 }, {
                     FileName1: "00016B.jpg"
@@ -610,7 +610,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 36
                 }],
                 Colors: "Stone",
-                Images: [{
+                Images: ["product-25.jpg", {
                     FileName: "STONETWILL.png "
                 }, {
                     FileName1: "STONETWILL1.png"
@@ -649,7 +649,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 37,
                 }],
                 Colors: "Stone",
-                Images: [{
+                Images: ["product-26.jpg", {
                     FileName: "SANDOVERSIZEDCROPSWEATSHIRT.jpg "
                 }, {
                     FileName1: "SANDOVERSIZEDCROPSWEATSHIRT1.jpg"
@@ -684,7 +684,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 38,
                 }],
                 Colors: "Green",
-                Images: [{
+                Images: ["product-27.jpg", {
                     FileName: "NUDEMESHABSTRACTRENAISSANCEPRINTCUPDETAILBODYSUIT.jpg "
                 }, {
                     FileName1: "NUDEMESHABSTRACTRENAISSANCEPRINTCUPDETAILBODYSUIT1.jpg"
@@ -720,7 +720,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 40,
                 }],
                 Colors: "Sand",
-                Images: [{
+                Images: ["product-28.jpg", {
                     FileName: "SANDSWEATCUFFEDHIGHWAISTJOGGERS.jpg "
                 }, {
                     FileName1: "SANDSWEATCUFFEDHIGHWAISTJOGGERS1.jpg"
@@ -756,7 +756,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 40,
                 }],
                 Colors: "Black",
-                Images: [{
+                Images: ["product-29.jpg", {
                     FileName: "BLACKSPORTACADEMYPRINTEDTSHIRT.jpg "
                 }, {
                     FileName1: "BLACKSPORTACADEMYPRINTEDTSHIRT1.jpg"
@@ -792,7 +792,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 40,
                 }],
                 Colors: "Black",
-                Images: [{
+                Images: ["product-30.jpg", {
                     FileName: "BLACKMAXICONTRASTHOODEDPUFFER.jpg "
                 }, {
                     FileName1: "BLACKMAXICONTRASTHOODEDPUFFER1.jpg"
@@ -828,7 +828,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 40,
                 }],
                 Colors: "Black",
-                Images: [{
+                Images: ["product-31.jpg", {
                     FileName: "BLACKCARGOZIPTHROUGHBELTEDSHIRTDRESS.jpg "
                 }, {
                     FileName1: "BLACKCARGOZIPTHROUGHBELTEDSHIRTDRESS1.jpg"
@@ -864,7 +864,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 40,
                 }],
                 Colors: "Grey",
-                Images: [{
+                Images: ["product-32.jpg", {
                     FileName: "GREYSLINKYCUTOUTSIDEBODYSUIT.jpg "
                 }, {
                     FileName1: "GREYSLINKYCUTOUTSIDEBODYSUIT1.jpg"
@@ -900,7 +900,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 40,
                 }],
                 Colors: "White",
-                Images: [{
+                Images: ["product-33.jpg", {
                     FileName: "WHITEWOVENOPENBACKBUTTONDETAILCINCHEDBLAZER.jpg "
                 }, {
                     FileName1: "WHITEWOVENOPENBACKBUTTONDETAILCINCHEDBLAZER1.jpg"
@@ -936,7 +936,7 @@ var app = angular.module('myapp', ['ngRoute'])
                     NoSiz: 40,
                 }],
                 Colors: "Stone",
-                Images: [{
+                Images: ["product-34.jpg", {
                     FileName: "STONECARGOPOCKETDETAILBOXYCROPPEDSHIRT.jpg "
                 }, {
                     FileName1: "STONECARGOPOCKETDETAILBOXYCROPPEDSHIRT1.jpg"
@@ -990,10 +990,10 @@ app.config(function($routeProvider) {
             templateUrl: "spDetails.htm",
             controller: "DetailController"
         })
-        .otherwise({
-            redirectTo: "/index.html"
-        });
-    // Thông tin về menu chính 
+        // .otherwise({
+        //     redirectTo: "/index.html"
+        // });
+        // Thông tin về menu chính 
 })
 
 // =======================================================================================
@@ -1046,7 +1046,14 @@ app.controller('main_controller', function($scope) {
 
 
     ];
+    //SLIDER MAIN 
 
+    // $scope.links = [
+    //     { src: "img/Slide1.jpg", alt: "", caption: "" },
+    //     { src: "img/Slide2.png", alt: "", caption: "" },
+    //     { src: "img/Slide3.png", alt: "", caption: "" },
+    //     { src: "img/Slide4.png", alt: "", caption: "" },
+    // ];
     // DATA - PRODUCTS 188 -  746 ====================================================
 
 
@@ -1110,6 +1117,21 @@ app.controller('main_controller', function($scope) {
 
 });
 
+// app.directive('carousel', function($timeout) {
+//     return {
+//         restrict: 'E',
+//         scope: {
+//             links: '='
+//         },
+//         templateUrl: 'index.html',
+//         link: function(scope, element) {
+//             $timeout(function() {
+//                 $('.carousel-indicators li', element).first().addClass('active');
+//                 $('.carousel-inner .item', element).first().addClass('active');
+//             });
+//         }
+//     }
+// });
 app.controller("SearchController", ["$scope", "$http",
     function($scope, $http) {
 
@@ -1148,41 +1170,57 @@ app.controller("SearchController", ["$scope", "$http",
     }
 ]);
 
+app.controller('MenController', ['$scope', '$http', function($scope, $http) {
+    // $http.get('datapro.json').success(function(data) {
+    //     $scope.jobs = data;
+    //     $scope.catchange = 'categories'
+    // });
+
+    $scope.filterCategory = function(job) {
+        if ($scope.catchange) {
+            return job.categories === $scope.catchange
+        } else {
+            return true
+        }
+    }
+}]);
+
+
 
 app.controller('MenController', function($scope, $http) {
-    $scope.productMen = function(value) {
-        var log = [];
-        angular.forEach(DataProdut, function(key, value) {
-            if (key == "IDGroup" && value == 'Men') {
-                return this.push(key + ': ' + value);
-            }
-        }, log);
-        console(log);
-        return log;
-    };
+    // $scope.productMen = function(value) {
+    //     var log = [];
+    //     angular.forEach(DataProdut, function(key, value) {
+    //         if (key == "IDGroup" && value == 'Men') {
+    //             return this.push(key + ': ' + value);
+    //         }
+    //     }, log);
+    //     console(log);
+    //     return log;
+    // };
 });
 
 
 app.controller('GirlController', function($scope, $http) {
-    $scope.productGirl = function(value) {
-        var log = [];
-        angular.forEach(DataProdut, function(key, value) {
-            if (key == "IDGroup" && value == 'Girl') {
-                return this.push(key + ': ' + value);
-            }
-        }, log);
-        console(log);
-        return log;
-    };
+    // $scope.productGirl = function(value) {
+    //     var log = [];
+    //     angular.forEach(DataProdut, function(key, value) {
+    //         if (key == "IDGroup" && value == 'Girl') {
+    //             return this.push(key + ': ' + value);
+    //         }
+    //     }, log);
+    //     console(log);
+    //     return log;
+    // };
 });
 
 
 app.controller('Men1Controller', function($scope, $http) {
-    // $scope.datas = new Array;
-    fetch('datapro.json')
-        .then(response => response.json())
-        .then(data => console.log('finished'));
-    $scope.Pro = data;
+    // // $scope.datas = new Array;
+    // fetch('datapro.json')
+    //     .then(response => response.json())
+    //     .then(data => console.log('finished'));
+    // $scope.Pro = data;
     // $http.get('datapro.json').success(function(data) {
 
 
