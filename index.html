@@ -43,10 +43,10 @@
 </head>
 
 
-<body>
+<body ng-controller="main_controller">
 
     <!-- header -->
-    <header ng-controller="main_controller">
+    <header>
         <div class="header bg-warning p-0 sticky-top ">
             <div class="row gx-0 d-none d-lg-flex ">
                 <div class="col-lg-7 px-5 text-start ">
@@ -113,7 +113,7 @@
                     </li>
                     <li ng-repeat="item in MenuItem">
                         <!-- ng-hide="hideSubmenu"  ng-mouseover="select($index)" .ng-mouseover="subMenuShow =false " ng-click="ListSubMenu($index)"-->
-                        <a href="#!{{item.Url}}" ng-click="ListSubMenu($index) ; IDGroups={{item.Url}}">
+                        <a href="#!{{item.Url}}" ng-click="ListSubMenu($index)">
                             <i class="{{item.icon}} "> </i> {{item.Name}} <i class="fa fa-caret-down"></i><b class="caret"></b> </a>
                     </li>
                     <li>
@@ -123,7 +123,7 @@
                 </ul>
 
                 <form>
-                    <input class=" " id="txtsearch.$" type="text" ng-model="testfilter" name="search" placeholder="Tìm kiếm sản phẩm... " />
+                    <input class=" " id="txtsearch" type="text" data-ng-model="txtsearch.$" name="search" placeholder="Tìm kiếm sản phẩm... " />
                     <button type="submit " ng_click="getValueFromsearch()"><i class="fa fa-search " aria-hidden="true "></i></button>
                 </form>
 
@@ -131,7 +131,7 @@
 
             <!-- ========================================== End Header For Destop Ok ============================================== -->
 
-
+            <!-- ng-model="testfilter"  -->
 
             <!-- =========================================================The Modal============================= -->
             <button id="cart">
@@ -1092,7 +1092,7 @@
             </div>
             <div class="row property__gallery ">
 
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women " ng-repeat="x in DataProdut | filter:testfilter:strict ">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix women " ng-repeat="x in DataProdut | filter:txtsearch:strict ">
                     <div class="product__item ">
                         <div class="product__item__pic set-bg " style="background-image: url( 'img/product/{{x.Images[0]}} ');height: 50vh; ">
                             <div class="label new ">New</div>
