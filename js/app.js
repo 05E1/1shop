@@ -1071,6 +1071,7 @@ app.controller('main_controller', function($scope) {
         $scope.IDGroups = '';
         // Sectionview = false;
         subMenuShow = false;
+        $scope.SectionMain = false;
         $scope.lisProduct = angular.$scope.DataProdut;
         console.log(lisProduct);
     }
@@ -1081,7 +1082,7 @@ app.controller('main_controller', function($scope) {
         $scope.subMenuShow = false; // Phần section hiển thị menu con mặc định ẩn 
         $scope.SectionProducts = false; // Phần section hiển thị Danh sách sản phẩm 
         $scope.ShowDetailSp = false; // Phần Section hiển thị nội dung chi tiết sản phẩm
-        // $scope.Sectionview = true;
+        $scope.SectionMain = true; // $scope.Sectionview = true;
     };
 
     $scope.ListSubMenu = function($index) {
@@ -1090,7 +1091,7 @@ app.controller('main_controller', function($scope) {
         $scope.IDGroups = $scope.MenuItem[$index].Url; // Được thể hiện khi lọc dữ liệu tương ứng với các nhóm trong controller của site con 
         $scope.subMenuShow = true;
         $scope.SectionProducts = true;
-
+        $scope.SectionMain = false;
     };
     ///Hàm hiển thị View cho Subsite contact
     $scope.initEnable = function() {
@@ -1098,7 +1099,8 @@ app.controller('main_controller', function($scope) {
         $scope.subMenuShow = false; // Phần section hiển thị menu con mặc định ẩn 
         $scope.SectionProducts = false; // Phần section hiển thị Danh sách sản phẩm 
         $scope.ShowDetailSp = false; // Phần Section hiển thị nội dung chi tiết sản phẩm
-        // $scope.Sectionview = true;
+
+        $scope.SectionMain = true; // $scope.Sectionview = true;
     };
 
 
@@ -1112,6 +1114,7 @@ app.controller('main_controller', function($scope) {
         $scope.ShowDetailSp = true;
         $scope.subMenuShow = false;
         $scope.SectionProducts = false;
+        $scope.SectionMain = false;
     };
 
 

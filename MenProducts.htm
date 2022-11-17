@@ -1,7 +1,11 @@
-<div class="parallax ms-8 p-8 text-center shadow-1-strong rounded mb-5">
-    <h1>Giới thiệu sản phẩm thời trang </h1>
-    <p> Live show fashion online </p>
-    <p> Live tream online at FPT-05E-Shop </p>
+<div class="parallax ">
+
+    <div class="ms-8 p-8 text-center shadow-1-strong rounded mb-5">
+        <h1>Giới thiệu sản phẩm thời trang </h1>
+        <p> Live show fashion online </p>
+        <p> Live tream online at FPT-05E-Shop </p>
+    </div>
+
 </div>
 <section class=" product ">
     <div class="container ">
@@ -15,7 +19,7 @@
             </div>
         </div>
 
-        <div class="row property__gallery " ng-controller="MenController ">
+        <div class="row property__gallery " ng-controller="MenController">
             <div class="col-lg-3 col-md-4 col-sm-6 mix women " ng-repeat="x in DataProdut | filter:{IDGroup: 'Men'} ">
                 <div class="product__item ">
                     <div class="product__item__pic set-bg " style="background-image: url( 'img/product/{{x.Images[0]}}' );height: 50vh; ">
