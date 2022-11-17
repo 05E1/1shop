@@ -1170,7 +1170,7 @@ app.controller("SearchController", ["$scope", "$http",
     }
 ]);
 
-app.controller('MenController', ['$scope', '$http', function($scope, $http) {
+app.controller('Men12Controller', ['$scope', '$http', function($scope, $http) {
     // $http.get('datapro.json').success(function(data) {
     //     $scope.jobs = data;
     //     $scope.catchange = 'categories'
@@ -1188,16 +1188,16 @@ app.controller('MenController', ['$scope', '$http', function($scope, $http) {
 
 
 app.controller('MenController', function($scope, $http) {
-    // $scope.productMen = function(value) {
-    //     var log = [];
-    //     angular.forEach(DataProdut, function(key, value) {
-    //         if (key == "IDGroup" && value == 'Men') {
-    //             return this.push(key + ': ' + value);
-    //         }
-    //     }, log);
-    //     console(log);
-    //     return log;
-    // };
+    $scope.productMen = function(value) {
+        var log = [];
+        angular.forEach(DataProdut, function(key, value) {
+            if (key == "IDGroup" && value == 'Men') {
+                return this.push(key + ': ' + value);
+            }
+        }, log);
+        console(log);
+        return log;
+    };
 });
 
 
