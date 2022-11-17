@@ -12,7 +12,7 @@
                     <h3 class="tde"><span class="null">Products {{IDGroups}}</span></h3>
                 </div>
             </div>
-            <div ng-controller="MenController">
+            <!-- <div ng-controller="MenController">
                 <span class="input">
                     <select ng-model="catchange" class="cs-select cs-skin-underline">
                         <option value="none">Guci</option>
@@ -23,10 +23,12 @@
                       
                     </select>
                 </span>
-            </div>
+            </div> 
+ 
+-->
         </div>
         <div class="row property__gallery ">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix women" ng-repeat="x in DataProdut | filter:{IDGroup: 'Girl', Brand:catchange} ">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix women" ng-repeat="x in DataProdut | filter:{IDGroup: 'Girl'} ">
                 <div class="product__item parallax_Men">
                     <div class="product__item__pic set-bg" style="background-image: url('img/product/{{x.Images[0]}}' );height: 50vh; ">
                         <div class="label new ">New</div>
