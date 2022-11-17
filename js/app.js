@@ -1100,7 +1100,7 @@ app.controller('main_controller', function($scope) {
         $scope.SectionProducts = false; // Phần section hiển thị Danh sách sản phẩm 
         $scope.ShowDetailSp = false; // Phần Section hiển thị nội dung chi tiết sản phẩm
 
-        $scope.SectionMain = true; // $scope.Sectionview = true;
+        $scope.SectionMain = false; // $scope.Sectionview = true;
     };
 
 
